@@ -10,13 +10,15 @@ import {
 import {Scene, Router, Actions} from 'react-native-router-flux';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-var ProjectsView = require('./ProjectsView');
+var ProjectDashboad = require('./ProjectDashboad');
 var SearchView = require('./SearchView');
 var NewsView = require('./NewsView');
 var MyView = require('./MyView');
 var LoginView = require('./LoginView');
 var SearchView = require('./SearchView');
 var UnitsView = require('./UnitsView');
+var ProjectList = require('./ProjectList');
+var ProjectDetails = require('./ProjectDetails');
 
 class TabIcon extends React.Component {
   render(){
@@ -38,11 +40,11 @@ var App = React.createClass({
         <Scene key="root">
           <Scene key="tabBar" tabs={true} default="projects"
             tabBarStyle={{backgroundColor: '#F6F6F6'}} duration={100}>
-  	        <Scene key="projects" title="重点项目" initial={false}
+  	        <Scene key="projectDashboad" title="重点项目" initial={true}
               icon={TabIcon} iconName={"ios-home"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
-              component={ProjectsView}/>
+              component={ProjectDashboad}/>
             <Scene key="news" title="电子报"
               icon={TabIcon} iconName={"ios-paper"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
@@ -69,7 +71,21 @@ var App = React.createClass({
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
-          <Scene key="login" component={LoginView} hideNavBar={true} initial={true}/>
+          <Scene key="projectList" component={ProjectList}
+            hideNavBar={false}
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="projectDetails" component={ProjectDetails}
+            hideNavBar={false}
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="login" component={LoginView} hideNavBar={true} initial={false}/>
         </Scene>
       </Router>
     );

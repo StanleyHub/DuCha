@@ -17,11 +17,10 @@ var MyView = React.createClass({
     };
   },
 
-
   render() {
     return (
       <View style={styles.container}>
-        <Text>Projects view</Text>
+        <Text>我的</Text>
       </View>
     );
   },

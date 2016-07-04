@@ -11,7 +11,7 @@ import {Actions} from 'react-native-router-flux';
 
 var Platform = require('Platform');
 
-var SearchView = React.createClass({
+var ProjectDetails = React.createClass({
   getInitialState: function() {
     return {
     };
@@ -21,7 +21,7 @@ var SearchView = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <Text>根据不同搜索条件搜索项目</Text>
+        <Text>Project Details</Text>
       </View>
     );
   },
@@ -35,4 +35,4 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = SearchView;
+module.exports = ProjectDetails;

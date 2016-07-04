@@ -22,7 +22,7 @@ var LoginView = React.createClass({
   },
 
   login: function() {
-    Actions.tabBar();
+    Actions.projectDashboad();
   },
 
   render() {
