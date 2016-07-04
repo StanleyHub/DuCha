@@ -16,6 +16,7 @@ var NewsView = require('./NewsView');
 var MyView = require('./MyView');
 var LoginView = require('./LoginView');
 var SearchView = require('./SearchView');
+var UnitsView = require('./UnitsView');
 
 class TabIcon extends React.Component {
   render(){
@@ -37,13 +38,11 @@ var App = React.createClass({
         <Scene key="root">
           <Scene key="tabBar" tabs={true} default="projects"
             tabBarStyle={{backgroundColor: '#F6F6F6'}} duration={100}>
-  	        <Scene key="projects" title="重点项目" initial={true}
+  	        <Scene key="projects" title="重点项目" initial={false}
               icon={TabIcon} iconName={"ios-home"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
-              component={ProjectsView}
-              onRight={()=>Actions.search()}
-              rightTitle={<Icon style={{color: 'white'}} name={'ios-search'} size={25} />}/>
+              component={ProjectsView}/>
             <Scene key="news" title="电子报"
               icon={TabIcon} iconName={"ios-paper"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
@@ -55,12 +54,22 @@ var App = React.createClass({
               titleStyle={{color: 'white'}}
               component={MyView}/>
   	      </Scene>
+
           <Scene key="search" component={SearchView} title="搜索"
+            hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
-          <Scene key="login" component={LoginView} hideNavBar={true} initial={false}/>
+
+          <Scene key="units" component={UnitsView}
+            hideNavBar={false}
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="login" component={LoginView} hideNavBar={true} initial={true}/>
         </Scene>
       </Router>
     );
