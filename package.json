@@ -9,6 +9,7 @@
     "react": "15.2.0",
     "react-native": "^0.28.0",
     "react-native-router-flux": "^3.30.4",
-    "react-native-vector-icons": "^2.0.3"
+    "react-native-vector-icons": "^2.0.3",
+    "underscore": "^1.8.3"
   }
 }
