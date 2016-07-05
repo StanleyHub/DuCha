@@ -29,7 +29,7 @@ var ProjectList = React.createClass({
       Actions.keyProject({title: project.name, project: project})
     }
     if(project.type === '重点工程') {
-      Actions.projectDetails({title: project.name, project: project})
+      Actions.keyEngineering({title: project.name, project: project})
     }
   },
 

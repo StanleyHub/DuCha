@@ -79,6 +79,19 @@ module.exports = {
     type: '重点工程',
     status: '进度缓慢',
     progress: '23%',
+    inform: [{
+      month: '1月',
+      content: '第一笔投资到位',
+    },{
+      month: '2月',
+      content: '完成示范小镇5个',
+    },{
+      month: '3月',
+      content: '完成示范小镇8个',
+    },{
+      month: '4月',
+      content: '完成示范小镇10个',
+    }]
   },{
     name: '关于九年制义务教育',
     type: '政府工作报告',
