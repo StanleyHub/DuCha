@@ -49,13 +49,13 @@ var ProjectDashboad = React.createClass({
           <View style={[styles.grid, {marginBottom: 15}]}>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '政府工作报告'})}>
+                <TouchableOpacity onPress={() => Actions.units({title: '政府工作报告', type2: 'gzbg'})}>
                   <Text style={styles.itemTitle}>政府工作报告</Text>
                   <Text style={styles.itemSubTitle}>153个</Text>
                 </TouchableOpacity>
               </View>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '重点项目'})}>
+                <TouchableOpacity onPress={() => Actions.units({title: '重点项目', type2: 'zdxm'})}>
                   <Text style={styles.itemTitle}>重点项目</Text>
                   <Text style={styles.itemSubTitle}>580个</Text>
                 </TouchableOpacity>
@@ -63,13 +63,13 @@ var ProjectDashboad = React.createClass({
             </View>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '重点工程'})}>
+                <TouchableOpacity onPress={() => Actions.units({title: '重点工程', type2: 'zdgc'})}>
                   <Text style={styles.itemTitle}>重点工程</Text>
                   <Text style={styles.itemSubTitle}>80个</Text>
                 </TouchableOpacity>
               </View>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '公开承诺'})}>
+                <TouchableOpacity onPress={() => Actions.units({title: '公开承诺', type2: 'gkcn'})}>
                   <Text style={styles.itemTitle}>公开承诺</Text>
                   <Text style={styles.itemSubTitle}>208个</Text>
                 </TouchableOpacity>
@@ -81,19 +81,19 @@ var ProjectDashboad = React.createClass({
           <View style={styles.grid}>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '财经口'})}>
+                <TouchableOpacity onPress={() => {Actions.units({title: '财经口', type2: 'all'})}}>
                   <Text style={styles.itemTitle}>财经口</Text>
                   <Text style={styles.itemSubTitle}>180个</Text>
                 </TouchableOpacity>
               </View>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '工交口'})}>
+                <TouchableOpacity onPress={() => Actions.units({title: '工交口',type2: 'all'})}>
                   <Text style={styles.itemTitle}>工交口</Text>
                   <Text style={styles.itemSubTitle}>203个</Text>
                 </TouchableOpacity>
               </View>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '金融口'})}>
+                <TouchableOpacity onPress={() => Actions.units({title: '金融口', type2: 'all'})}>
                   <Text style={styles.itemTitle}>金融口</Text>
                   <Text style={styles.itemSubTitle}>193个</Text>
                 </TouchableOpacity>
@@ -102,19 +102,19 @@ var ProjectDashboad = React.createClass({
 
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '财经口'})}>
+                <TouchableOpacity onPress={() => Actions.units({title: '城建口', type2: 'all'})}>
                   <Text style={styles.itemTitle}>城建口</Text>
                   <Text style={styles.itemSubTitle}>85个</Text>
                 </TouchableOpacity>
               </View>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '工交口'})}>
+                <TouchableOpacity onPress={() => Actions.units({title: '城投口', type2: 'all'})}>
                   <Text style={styles.itemTitle}>城投口</Text>
                   <Text style={styles.itemSubTitle}>253个</Text>
                 </TouchableOpacity>
               </View>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '金融口'})}>
+                <TouchableOpacity onPress={() => Actions.units({title: '农口', type2: 'all'})}>
                   <Text style={styles.itemTitle}>农口</Text>
                   <Text style={styles.itemSubTitle}>221个</Text>
                 </TouchableOpacity>

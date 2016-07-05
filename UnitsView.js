@@ -15,14 +15,31 @@ import {Actions} from 'react-native-router-flux';
 
 var _ = require('underscore');
 
-var {Units} = require('./mock/data');
+var {Units, Projects} = require('./mock/data');
 var UnitsView = React.createClass({
 
   _renderListItem: function() {
+    var projects = [];
+    switch (this.props.type2) {
+      case 'gzbg':
+        projects = Projects.slice(3,4);
+        break;
+      case 'zdxm':
+        projects = Projects.slice(1,2);
+        break;
+      case 'zdgc':
+        projects = Projects.slice(2,3);
+        break;
+      case 'gkcn':
+        projects = Projects.slice(0,1);
+        break;
+      default:
+        projects = Projects;
+    }
     return _.map(Units, function(unit, index) {
       return (
         <View key={index}>
-          <TouchableOpacity onPress={() => Actions.projectList({title: unit.name})}>
+          <TouchableOpacity onPress={() => Actions.projectList({title: unit.name, projects: projects})}>
             <View style={[styles.row, styles.listItem]}>
               <Text style={styles.unitName}>{unit.name}</Text>
               <Text style={styles.count}>{unit.count}</Text>

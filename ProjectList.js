@@ -34,7 +34,7 @@ var ProjectList = React.createClass({
   },
 
   _renderProject: function() {
-    return _.map(Projects, (project, index) => {
+    return _.map(this.props.projects, (project, index) => {
       var color = '#87c754';
       if(project.status == '进行中') {
         color = '#eea14b';
