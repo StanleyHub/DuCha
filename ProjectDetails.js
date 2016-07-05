@@ -21,7 +21,7 @@ var ProjectDetails = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <Text>Project Details</Text>
+        <Text>项目详情界面，提供督办功能</Text>
       </View>
     );
   },

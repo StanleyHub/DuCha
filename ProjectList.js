@@ -31,7 +31,7 @@ var ProjectList = React.createClass({
           <TouchableOpacity onPress={() => Actions.projectDetails()}>
             <View style={styles.row}>
               <Text style={{flex: 1,}}>{project.name}</Text>
-              <Text style={{fontSize: 18, color: color, width: 45, textAlign: 'left'}}>{project.progress}</Text>
+              <Text style={{fontSize: 18, color: color, width: 50, textAlign: 'left'}}>{project.progress}</Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -67,7 +67,6 @@ var styles = StyleSheet.create({
     backgroundColor: 'white',
     height: 60,
     borderBottomWidth: 3,
-    borderRadius: 5,
     marginBottom: 12,
   },
 });

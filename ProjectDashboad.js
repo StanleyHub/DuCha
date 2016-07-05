@@ -26,6 +26,7 @@ var ProjectDashboad = React.createClass({
             </View>
           </TouchableOpacity>
         </View>
+
         <View style={{flex: 1}}>
           <View style={styles.chartBox}>
             <Text style={styles.title}>2016年安康市共计1021个重点项目</Text>
@@ -52,6 +53,7 @@ var ProjectDashboad = React.createClass({
                 </TouchableOpacity>
               </View>
             </View>
+
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
                 <TouchableOpacity onPress={() => Actions.units({title: '财经口'})}>
@@ -72,9 +74,10 @@ var ProjectDashboad = React.createClass({
                 </TouchableOpacity>
               </View>
             </View>
+            </View>
           </View>
         </View>
-      </View>
+
     );
   },
 });
