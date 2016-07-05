@@ -6,6 +6,7 @@ import {
   View,
   ScrollView,
   ProgressViewIOS,
+  ProgressBarAndroid,
   TouchableOpacity
 } from 'react-native';
 
@@ -40,6 +41,24 @@ var BaoGaoView = React.createClass({
     });
   },
 
+  _loadProgressBar: function() {
+    if(Platform.OS === 'ios') {
+      return (
+        <ProgressViewIOS style={styles.progressView}
+          progress={1}
+          progressTintColor="#87c754"/>
+      );
+    } else {
+      return (
+        <ProgressBarAndroid style={styles.progressView}
+          progress={1}
+          styleAttr="Horizontal"
+          indeterminate={false}
+          color="#87c754"/>
+      );
+    }
+  },
+
   render() {
     return (
       <ScrollView style={styles.container}>
@@ -47,9 +66,7 @@ var BaoGaoView = React.createClass({
         <View style={styles.section}>
           <Text style={{fontSize: 18, marginTop: 5,}}>九年义务教育巩固率达到85％</Text>
           <View style={styles.row}>
-            <ProgressViewIOS style={styles.progressView}
-              progress={1}
-              progressTintColor="#87c754"/>
+            {this._loadProgressBar()}
             <Text style={{color: '#87c754', fontSize: 20,}}>100%</Text>
             <TouchableOpacity style={styles.button} onPress={() => Actions.duban()}>
               <Text style={styles.buttonText}>督 办</Text>

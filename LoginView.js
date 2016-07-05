@@ -33,7 +33,6 @@ var LoginView = React.createClass({
     return (
       <View style={styles.container}>
         <Image source={imageUri} style={styles.backgroundImage}>
-          <Text style={styles.title}>安康目标督办管理平台</Text>
           <View style={styles.form}>
             <View style={[styles.row, styles.phone]}>
               <Icon name={'ios-call'} size={25} style={styles.icon}/>
@@ -79,6 +78,7 @@ var styles = StyleSheet.create({
   form: {
     marginLeft: 15,
     marginRight: 15,
+    marginTop: 80,
     borderRadius: 6,
     borderColor:"#ECECEC",
     borderWidth: 1,
@@ -124,6 +124,7 @@ var styles = StyleSheet.create({
     flex: 1,
     width: null,
     height: null,
+    resizeMode: 'contain',
   }
 });
 

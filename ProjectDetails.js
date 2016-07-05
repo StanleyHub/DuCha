@@ -6,6 +6,7 @@ import {
   View,
   ScrollView,
   ProgressViewIOS,
+  ProgressBarAndroid,
   TouchableOpacity
 } from 'react-native';
 
@@ -40,6 +41,24 @@ var ProjectDetails = React.createClass({
     });
   },
 
+  _loadProgressBar: function() {
+    if(Platform.OS === 'ios') {
+      return (
+        <ProgressViewIOS style={styles.progressView}
+          progress={0.43}
+          progressTintColor="#eea14b"/>
+      );
+    } else {
+      return (
+        <ProgressBarAndroid style={styles.progressView}
+          progress={0.43}
+          styleAttr="Horizontal"
+          indeterminate={false}
+          color="#eea14b"/>
+      );
+    }
+  },
+
   render() {
     return (
       <ScrollView style={styles.container}>
@@ -47,9 +66,7 @@ var ProjectDetails = React.createClass({
         <View style={styles.section}>
           <Text style={{fontSize: 18, marginTop: 5, }}>全年新增城镇就业2万人</Text>
           <View style={styles.row}>
-            <ProgressViewIOS style={styles.progressView}
-              progress={0.43}
-              progressTintColor="#eea14b"/>
+            {this._loadProgressBar()}
             <Text style={{color: '#eea14b', fontSize: 20,}}>43.0%</Text>
             <TouchableOpacity style={styles.button} onPress={() => Actions.duban()}>
               <Text style={styles.buttonText}>督 办</Text>

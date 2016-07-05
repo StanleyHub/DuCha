@@ -65,7 +65,7 @@ var HEADER_HEIGHT = Platform.OS === 'ios' ? 64 : 55;
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 65
+    marginTop: HEADER_HEIGHT
   },
   searchBox: {
     padding: 10,
