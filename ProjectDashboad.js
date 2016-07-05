@@ -41,10 +41,44 @@ var ProjectDashboad = React.createClass({
         <ScrollView style={{flex: 1, marginBottom: 55,}}>
           <View style={styles.chartBox}>
             <Text style={styles.title}>2016年安康市共计1021个重点项目</Text>
-            {this._loadChart()}
+            <TouchableOpacity onPress={() => Actions.charts()}>
+              {this._loadChart()}
+            </TouchableOpacity>
           </View>
+          <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按类型分</Text>
+          <View style={[styles.grid, {marginBottom: 15}]}>
+            <View style={[styles.row, styles.gridRow]}>
+              <View style={[styles.item]}>
+                <TouchableOpacity onPress={() => Actions.units({title: '政府工作报告'})}>
+                  <Text style={styles.itemTitle}>政府工作报告</Text>
+                  <Text style={styles.itemSubTitle}>153个</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={[styles.item]}>
+                <TouchableOpacity onPress={() => Actions.units({title: '重点项目'})}>
+                  <Text style={styles.itemTitle}>重点项目</Text>
+                  <Text style={styles.itemSubTitle}>580个</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View style={[styles.row, styles.gridRow]}>
+              <View style={[styles.item]}>
+                <TouchableOpacity onPress={() => Actions.units({title: '重点工程'})}>
+                  <Text style={styles.itemTitle}>重点工程</Text>
+                  <Text style={styles.itemSubTitle}>80个</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={[styles.item]}>
+                <TouchableOpacity onPress={() => Actions.units({title: '公开承诺'})}>
+                  <Text style={styles.itemTitle}>公开承诺</Text>
+                  <Text style={styles.itemSubTitle}>208个</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+
           <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按口分</Text>
-          <View style={styles.fenkouGrid}>
+          <View style={styles.grid}>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
                 <TouchableOpacity onPress={() => Actions.units({title: '财经口'})}>
@@ -86,9 +120,9 @@ var ProjectDashboad = React.createClass({
                 </TouchableOpacity>
               </View>
             </View>
-            </View>
-          </ScrollView>
-        </View>
+          </View>
+        </ScrollView>
+      </View>
     );
   },
 });
@@ -130,12 +164,11 @@ var styles = StyleSheet.create({
     marginBottom: 10,
   },
   chart: {
-    width: 240,
-    height: 240,
-    backgroundColor: 'grey',
+    width: 200,
+    height: 200,
     alignSelf: 'center'
   },
-  fenkouGrid: {
+  grid: {
     marginLeft: 10,
     marginRight: 10,
     paddingLeft: 10,
@@ -162,7 +195,7 @@ var styles = StyleSheet.create({
   itemSubTitle: {
     color: '#DFDFDF',
     alignSelf: 'flex-end',
-    marginTop: 10,
+    marginTop: 12,
   },
 });
 
