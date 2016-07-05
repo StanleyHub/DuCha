@@ -21,6 +21,8 @@ var ProjectList = require('./ProjectList');
 var ProjectDetails = require('./ProjectDetails');
 var ChartView = require('./ChartView');
 var DuBanView = require('./DuBanView');
+var BaoGaoView = require('./BaoGaoView');
+var KeyProjectView = require('./KeyProjectView');
 
 class TabIcon extends React.Component {
   render(){
@@ -94,7 +96,21 @@ var App = React.createClass({
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
+          <Scene key="baogao" component={BaoGaoView}
+            hideNavBar={false}
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
           <Scene key="duban" component={DuBanView} title="督办"
+            hideNavBar={false}
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="keyProject" component={KeyProjectView}
             hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}

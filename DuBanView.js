@@ -21,7 +21,6 @@ var DuBanView = React.createClass({
     };
   },
 
-
   render() {
     return (
       <View style={styles.container}>

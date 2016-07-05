@@ -62,8 +62,18 @@ module.exports = {
   },{
     name: '汉江景观打造项目',
     type: '重点项目',
-    status: '已完成',
-    progress: '100%',
+    status: '进行中',
+    progress: '50%',
+    inform: [{
+      month: '1月',
+      content: '第一笔投资到位',
+    },{
+      month: '2月',
+      content: '基础工程完工',
+    },{
+      month: '3月',
+      content: '主体完工，下月工作计划30%',
+    }]
   },{
     name: '示范小城镇',
     type: '重点工程',
@@ -74,6 +84,19 @@ module.exports = {
     type: '政府工作报告',
     status: '已完成',
     progress: '100%',
+    inform: [{
+      month: '1月',
+      content: '优化中小学布局调整',
+    },{
+      month: '2月',
+      content: '加快推进义务教育阶段教育信息化',
+    },{
+      month: '3月',
+      content: '建立健全义务教育“控制辍学”工作长效机制',
+    },{
+      month: '4月',
+      content: '扩大中等职业学校办学规模',
+    }]
   }],
   news: [{}]
 };

@@ -18,6 +18,21 @@ var {Projects} = require('./mock/data');
 
 var ProjectList = React.createClass({
 
+  _projectClick: function(project) {
+    if(project.type === '公开承诺') {
+      Actions.projectDetails({title: project.name, project: project})
+    }
+    if(project.type === '政府工作报告') {
+      Actions.baogao({title: project.name, project: project})
+    }
+    if(project.type === '重点项目') {
+      Actions.keyProject({title: project.name, project: project})
+    }
+    if(project.type === '重点工程') {
+      Actions.projectDetails({title: project.name, project: project})
+    }
+  },
+
   _renderProject: function() {
     return _.map(Projects, (project, index) => {
       var color = '#87c754';
@@ -29,7 +44,7 @@ var ProjectList = React.createClass({
       }
       return (
         <View key={index} style={[styles.project]}>
-          <TouchableOpacity style={{flex: 1}} onPress={() => Actions.projectDetails({title: project.name, project: project})}>
+          <TouchableOpacity style={{flex: 1}} onPress={() => this._projectClick(project)}>
             <View style={styles.row}>
               <View style={styles.projectInfo}>
                 <Text style={styles.name}>{project.name}</Text>

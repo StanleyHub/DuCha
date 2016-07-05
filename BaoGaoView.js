@@ -15,7 +15,7 @@ import {Actions} from 'react-native-router-flux';
 var _ = require('underscore');
 var Platform = require('Platform');
 
-var ProjectDetails = React.createClass({
+var BaoGaoView = React.createClass({
   _renderMonthlyInform: function() {
     return _.map(this.props.project.inform, (inform, index) => {
       return (
@@ -43,14 +43,14 @@ var ProjectDetails = React.createClass({
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={{marginTop: 10, marginLeft: 10, marginBottom: 5, color: 'grey'}}>公开承诺</Text>
+        <Text style={{marginTop: 10, marginLeft: 10, marginBottom: 5, color: 'grey'}}>政府工作报告</Text>
         <View style={styles.section}>
-          <Text style={{fontSize: 18, marginTop: 5, }}>全年新增城镇就业2万人</Text>
+          <Text style={{fontSize: 18, marginTop: 5,}}>九年义务教育巩固率达到85％</Text>
           <View style={styles.row}>
             <ProgressViewIOS style={styles.progressView}
-              progress={0.43}
-              progressTintColor="#eea14b"/>
-            <Text style={{color: '#eea14b', fontSize: 20,}}>43.0%</Text>
+              progress={1}
+              progressTintColor="#87c754"/>
+            <Text style={{color: '#87c754', fontSize: 20,}}>100%</Text>
             <TouchableOpacity style={styles.button} onPress={() => Actions.duban()}>
               <Text style={styles.buttonText}>督 办</Text>
             </TouchableOpacity>
@@ -116,4 +116,4 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = ProjectDetails;
+module.exports = BaoGaoView;
