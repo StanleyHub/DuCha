@@ -28,11 +28,24 @@ var ProjectList = React.createClass({
         color = '#ea6449';
       }
       return (
-        <View key={index} style={[styles.project, {borderColor: color}]}>
-          <TouchableOpacity onPress={() => Actions.projectDetails()}>
+        <View key={index} style={[styles.project]}>
+          <TouchableOpacity style={{flex: 1}} onPress={() => Actions.projectDetails()}>
             <View style={styles.row}>
-              <Text style={{flex: 1,}}>{project.name}</Text>
-              <Text style={{fontSize: 18, color: color, width: 50, textAlign: 'left'}}>{project.progress}</Text>
+              <View style={styles.projectInfo}>
+                <Text style={styles.name}>{project.name}</Text>
+                <View style={styles.row}>
+                  <Icon style={{color: '#999999'}} name={'ios-person'} size={22} />
+                  <Text style={{marginLeft: 3, color: '#999999', fontSize: 15, marginTop: 3}}>李四</Text>
+                </View>
+              </View>
+              <View style={{width: 80,
+                height: 80,
+                backgroundColor:color,
+                justifyContent: 'center',
+                alignItems: 'center'}}>
+                <Text style={{fontSize: 25, color: 'white'}}>{project.progress}</Text>
+                <Text style={{fontSize: 13, color: 'white', marginTop: 8,}}>{project.status}</Text>
+              </View>
             </View>
           </TouchableOpacity>
         </View>
@@ -64,12 +77,18 @@ var styles = StyleSheet.create({
     padding: 10,
   },
   project: {
-    padding: 8,
     backgroundColor: 'white',
-    height: 60,
-    borderBottomWidth: 3,
+    height: 80,
     marginBottom: 12,
   },
+  name: {
+     fontSize: 16,
+     marginBottom: 25,
+  },
+  projectInfo: {
+    flex: 1,
+    padding: 8,
+  }
 });
 
 module.exports = ProjectList;

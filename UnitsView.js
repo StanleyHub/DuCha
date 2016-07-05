@@ -93,7 +93,7 @@ var styles = StyleSheet.create({
     fontSize: 18,
   },
   count: {
-    color: '#DFDFDF',
+    color: '#999999',
     fontSize: 15,
   }
 });

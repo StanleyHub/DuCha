@@ -38,7 +38,19 @@ module.exports = {
   Projects: [{
     name: '引导有条件农村居民进程落户8万人',
     status: '进行中',
-    progress: '43%'
+    progress: '43%',
+    description: '',
+    totalInvest: '',
+    yearPlan: '',
+    yearInvest: '',
+    responsibleUnit: '',
+    monthProgress: '',
+    investDone: '',
+    nextMonthPlan: '',
+    issues: '',
+    nextStepPlan: '',
+    leader: '市人社局',
+    operator: ''
   },{
     name: '引导有条件农村居民进程落户8万人',
     status: '已完成',
@@ -59,5 +71,6 @@ module.exports = {
     name: '引导有条件农村居民进程落户8万人',
     status: '进度缓慢',
     progress: '23%'
-  }]
+  }],
+  news: [{}]
 };

@@ -96,7 +96,7 @@ var styles = StyleSheet.create({
     height: 45,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#BD1E22',
+    backgroundColor: '#D03F4A',
     borderRadius: 8,
     marginTop: 20,
     marginLeft: 15,

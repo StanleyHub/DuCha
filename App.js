@@ -39,8 +39,8 @@ var App = React.createClass({
       <Router>
         <Scene key="root">
           <Scene key="tabBar" tabs={true} default="projects"
-            tabBarStyle={{backgroundColor: '#F6F6F6'}} duration={100}>
-  	        <Scene key="projectDashboad" title="重点项目" initial={true}
+            tabBarStyle={{backgroundColor: '#F6F6F6'}}>
+  	        <Scene key="projectDashboad" title="督办项目" initial={true}
               icon={TabIcon} iconName={"ios-home"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
