@@ -22,11 +22,10 @@ var LoginView = React.createClass({
   },
 
   login: function() {
-    Actions.projectDashboad();
+    Actions.tabBar();
   },
 
   render() {
-
     var imageUri = {uri: 'login_back'};
     if(Platform.OS == 'ios') {
       imageUri = require('./images/login_back.png');
