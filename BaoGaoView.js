@@ -55,7 +55,6 @@ var BaoGaoView = React.createClass({
               <Text style={styles.buttonText}>督 办</Text>
             </TouchableOpacity>
           </View>
-
         </View>
         <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按月通报</Text>
         <View style={[styles.section]}>

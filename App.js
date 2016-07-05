@@ -50,12 +50,12 @@ var App = React.createClass({
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
               component={ProjectDashboad}/>
-            <Scene key="news" title="电子报"
+            <Scene key="news" title="督办通报"
               icon={TabIcon} iconName={"ios-paper"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
               component={NewsView}/>
-            <Scene key="my" title="我的"
+            <Scene key="my" title="我"
               icon={TabIcon} iconName={"ios-contact"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
