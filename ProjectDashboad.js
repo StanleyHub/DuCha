@@ -77,7 +77,7 @@ var ProjectDashboad = React.createClass({
             </View>
           </View>
 
-          <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按口分</Text>
+          <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按分口</Text>
           <View style={styles.grid}>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
