@@ -29,13 +29,18 @@ var ProjectList = React.createClass({
       }
       return (
         <View key={index} style={[styles.project]}>
-          <TouchableOpacity style={{flex: 1}} onPress={() => Actions.projectDetails()}>
+          <TouchableOpacity style={{flex: 1}} onPress={() => Actions.projectDetails({title: project.name, project: project})}>
             <View style={styles.row}>
               <View style={styles.projectInfo}>
                 <Text style={styles.name}>{project.name}</Text>
-                <View style={styles.row}>
-                  <Icon style={{color: '#999999'}} name={'ios-person'} size={22} />
-                  <Text style={{marginLeft: 3, color: '#999999', fontSize: 15, marginTop: 3}}>李四</Text>
+                <View style={[styles.row, {justifyContent: 'space-between'}]}>
+                  <View style={styles.row}>
+                    <Text style={{marginLeft: 3, color: '#999999', fontSize: 15, marginTop: 3,}}>{project.type}</Text>
+                  </View>
+                  <View style={styles.row}>
+                    <Icon style={{color: '#999999'}} name={'ios-person'} size={22} />
+                    <Text style={{marginLeft: 3, color: '#999999', fontSize: 15, marginTop: 3}}>张翔</Text>
+                  </View>
                 </View>
               </View>
               <View style={{width: 80,
@@ -83,11 +88,12 @@ var styles = StyleSheet.create({
   },
   name: {
      fontSize: 16,
-     marginBottom: 25,
+     marginBottom: 5,
   },
   projectInfo: {
     flex: 1,
     padding: 8,
+    justifyContent: 'space-between',
   }
 });
 

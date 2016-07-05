@@ -5,6 +5,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  Platform
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -24,11 +25,15 @@ var MyView = React.createClass({
   },
 
   render() {
+    var avatarUri = {uri: 'avatar'};
+    if(Platform.OS == 'ios') {
+      avatarUri = require('./images/avatar.png');
+    }
     return (
       <View style={styles.container}>
         <View style={styles.section}>
           <View style={styles.row}>
-            <Image style={styles.avatar} source={require('./images/avatar.png')}/>
+            <Image style={styles.avatar} source={avatarUri}/>
             <View style={{marginLeft: 10, marginTop: 10}}>
               <Text style={styles.name}>{this.state.name}</Text>
               <Text style={styles.unit_name}>{this.state.unit_name}</Text>

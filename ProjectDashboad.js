@@ -15,6 +15,18 @@ var Platform = require('Platform');
 
 var ProjectDashboad = React.createClass({
 
+  _loadChart: function() {
+    if(Platform.OS === 'ios') {
+      return (
+        <Image style={styles.chart} source={require('./images/piechart.png')}/>
+      );
+    } else {
+      return (
+        <Image style={styles.chart} source={{uri: 'piechart'}} />
+      );
+    }
+  },
+
   render() {
     return (
       <View style={styles.container}>
@@ -30,8 +42,9 @@ var ProjectDashboad = React.createClass({
         <ScrollView style={{flex: 1}}>
           <View style={styles.chartBox}>
             <Text style={styles.title}>2016年安康市共计1021个重点项目</Text>
-            <Image style={styles.chart} source={require('./images/piechart.png')}/>
+            {this._loadChart()}
           </View>
+          <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按口分</Text>
           <View style={styles.fenkouGrid}>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
@@ -86,7 +99,7 @@ var styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: HEADER_HEIGHT,
-    backgroundColor: 'white'
+    backgroundColor: '#E9E9EF'
   },
   searchBox: {
     padding: 10,
@@ -103,7 +116,12 @@ var styles = StyleSheet.create({
     backgroundColor:'white'
   },
   chartBox: {
+    marginTop: 10,
     marginBottom: 20,
+    backgroundColor: 'white',
+    marginLeft: 10,
+    marginRight: 10,
+    borderRadius: 5,
   },
   title: {
     color: '#797979',
@@ -119,7 +137,12 @@ var styles = StyleSheet.create({
     alignSelf: 'center'
   },
   fenkouGrid: {
+    marginLeft: 10,
+    marginRight: 10,
     paddingLeft: 10,
+    paddingBottom: 10,
+    backgroundColor: 'white',
+    borderRadius: 5,
   },
   gridRow: {
     height: 60,
@@ -134,8 +157,8 @@ var styles = StyleSheet.create({
   },
   itemTitle: {
     color: 'white',
-    fontSize: 18,
-    fontWeight: "500",
+    fontSize: 16,
+    fontWeight: "400",
   },
   itemSubTitle: {
     color: '#DFDFDF',

@@ -26,9 +26,14 @@ var LoginView = React.createClass({
   },
 
   render() {
+
+    var imageUri = {uri: 'login_back'};
+    if(Platform.OS == 'ios') {
+      imageUri = require('./images/login_back.png');
+    }
     return (
       <View style={styles.container}>
-        <Image source={{uri: 'login_back'}} style={styles.backgroundImage}>
+        <Image source={imageUri} style={styles.backgroundImage}>
           <Text style={styles.title}>安康目标督办管理平台</Text>
           <View style={styles.form}>
             <View style={[styles.row, styles.phone]}>
