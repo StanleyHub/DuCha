@@ -38,8 +38,7 @@ var ProjectDashboad = React.createClass({
             </View>
           </TouchableOpacity>
         </View>
-
-        <ScrollView style={{flex: 1}}>
+        <ScrollView style={{flex: 1, marginBottom: 55,}}>
           <View style={styles.chartBox}>
             <Text style={styles.title}>2016年安康市共计1021个重点项目</Text>
             {this._loadChart()}
