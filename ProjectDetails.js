@@ -4,7 +4,9 @@ import {
   Image,
   Text,
   View,
-  ScrollView
+  ScrollView,
+  ProgressViewIOS,
+  TouchableOpacity
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -14,11 +16,6 @@ var _ = require('underscore');
 var Platform = require('Platform');
 
 var ProjectDetails = React.createClass({
-  getInitialState: function() {
-    return {
-    };
-  },
-
   _renderMonthlyInform: function() {
     return _.map(this.props.project.inform, (inform, index) => {
       return (
@@ -46,9 +43,19 @@ var ProjectDetails = React.createClass({
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={{marginTop: 10, marginLeft: 10, marginBottom: 5, color: 'grey'}}>基本信息</Text>
+        <Text style={{marginTop: 10, marginLeft: 10, marginBottom: 5, color: 'grey'}}>公开承诺</Text>
         <View style={styles.section}>
-          <Text>......</Text>
+          <Text style={{fontSize: 18, marginTop: 5, marginLeft: 5,}}>全年新增城镇就业2万人</Text>
+          <View style={styles.row}>
+            <ProgressViewIOS style={styles.progressView}
+              progress={0.43}
+              progressTintColor="#eea14b"/>
+            <Text style={{color: '#eea14b', fontSize: 20,}}>43.0%</Text>
+            <TouchableOpacity style={styles.button} onPress={() => Actions.duban()}>
+              <Text style={styles.buttonText}>督 办</Text>
+            </TouchableOpacity>
+          </View>
+
         </View>
         <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按月通报</Text>
         <View style={[styles.section]}>
@@ -88,6 +95,24 @@ var styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.1)',
     height: StyleSheet.hairlineWidth,
     marginVertical: 5,
+  },
+  progressView: {
+    flex: 1,
+    marginTop: 10,
+    marginRight: 8,
+  },
+  button: {
+    height: 30,
+    width: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#D03F4A',
+    borderRadius: 5,
+    marginLeft: 5,
+  },
+  buttonText: {
+    fontSize: 16,
+    color: 'white',
   },
 });
 

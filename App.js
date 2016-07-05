@@ -20,6 +20,7 @@ var UnitsView = require('./UnitsView');
 var ProjectList = require('./ProjectList');
 var ProjectDetails = require('./ProjectDetails');
 var ChartView = require('./ChartView');
+var DuBanView = require('./DuBanView');
 
 class TabIcon extends React.Component {
   render(){
@@ -92,6 +93,14 @@ var App = React.createClass({
             titleStyle={{color: 'white'}}
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="duban" component={DuBanView} title="督办"
+            hideNavBar={false}
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
           <Scene key="login" component={LoginView} hideNavBar={true} initial={false}/>
         </Scene>
       </Router>
