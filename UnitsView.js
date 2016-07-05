@@ -6,7 +6,8 @@ import {
   View,
   TouchableOpacity,
   ListView,
-  Platform
+  Platform,
+  ScrollView
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -45,9 +46,9 @@ var UnitsView = React.createClass({
           </TouchableOpacity>
         </View>
 
-        <View style={styles.listView}>
+        <ScrollView style={styles.listView}>
           {this._renderListItem()}
-        </View>
+        </ScrollView>
       </View>
     );
   },

@@ -4,7 +4,8 @@ import {
   Image,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity,
+  ScrollView
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -41,11 +42,11 @@ var ProjectList = React.createClass({
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <View style={styles.projects}>
           {this._renderProject()}
         </View>
-      </View>
+      </ScrollView>
     );
   },
 });

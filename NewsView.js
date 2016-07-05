@@ -4,6 +4,7 @@ import {
   Image,
   Text,
   View,
+  ScrollView
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -20,9 +21,9 @@ var NewsView = React.createClass({
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text>电子报</Text>
-      </View>
+      </ScrollView>
     );
   },
 });
