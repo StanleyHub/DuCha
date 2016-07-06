@@ -30,14 +30,6 @@ var ProjectDashboad = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.searchBox}>
-          <TouchableOpacity onPress={Actions.search}>
-            <View style={[styles.row, styles.searchInput]}>
-              <Icon style={{color: '#DFDFDF'}} name={'ios-search'} size={20} />
-              <Text style={{color: '#DFDFDF', fontSize: 15, marginLeft: 8,}}>输入项目名称进行搜索</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
         <ScrollView style={{flex: 1, marginBottom: 55, marginTop: 10}}>
           <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按类型</Text>
           <View style={[styles.grid, {marginBottom: 15}]}>

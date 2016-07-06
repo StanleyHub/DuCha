@@ -56,7 +56,9 @@ var App = React.createClass({
               icon={TabIcon} iconName={"ios-paper"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
-              component={NewsView}/>
+              component={NewsView}
+              onRight={()=>{alert('敬请期待');}}
+              rightTitle={<Icon style={{color: 'white'}} name={'ios-search'} size={25} />}/>
             <Scene key="chart" title="数据分析"
               icon={TabIcon} iconName={"ios-pie"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}

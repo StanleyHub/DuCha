@@ -93,7 +93,8 @@ var HEADER_HEIGHT = Platform.OS === 'ios' ? 64 : 55;
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: HEADER_HEIGHT
+    marginTop: HEADER_HEIGHT,
+    marginBottom: 55,
   },
   section: {
     marginLeft: 10,

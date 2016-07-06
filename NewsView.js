@@ -45,14 +45,6 @@ var NewsView = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.searchBox}>
-          <TouchableOpacity>
-            <View style={[styles.row, styles.searchInput]}>
-              <Icon style={{color: '#DFDFDF'}} name={'ios-search'} size={20} />
-              <Text style={{color: '#DFDFDF', fontSize: 15, marginLeft: 8,}}>输入关键字进行搜索</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
         <ScrollView style={styles.listView}>
           {this._renderListItem()}
         </ScrollView>
