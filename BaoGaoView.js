@@ -60,7 +60,7 @@ var BaoGaoView = React.createClass({
   },
 
   render() {
-    var avatarUri = {uri: 'avatar'};
+    var avatarUri = {uri: 'avatar2'};
     if(Platform.OS == 'ios') {
       avatarUri = require('./images/avatar2.jpg');
     }
@@ -128,7 +128,7 @@ var BaoGaoView = React.createClass({
             </View>
           </View>
         </View>
-        <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>项目负责人</Text>
+        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>项目负责人</Text>
         <View style={[styles.section]}>
           <View style={styles.row}>
             <View>
@@ -141,16 +141,26 @@ var BaoGaoView = React.createClass({
             <View style={{width: 30,
               justifyContent: 'center',
               alignItems: 'center'}}>
-              <Icon name={'ios-chatbubbles'} style={{color: '#87c754'}} size={30}/>
+              <TouchableOpacity onPress={() => Actions.chat()}>
+                <Icon name={'ios-chatbubbles'} style={{color: '#87c754'}} size={30}/>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
-        <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>督办事项</Text>
-        <View style={[styles.section]}>
+        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>督办事项</Text>
+        <View style={styles.section}>
           <View style={styles.row}>
             <View style={{flex: 1, }}>
-              <Text style={{fontSize: 17,}}>上报下一季度的计划</Text>
-              <Text style={{fontSize: 14, marginTop: 8, color: '#999999'}}>截止日期：2016年6月12日</Text>
+              <View style={styles.row}>
+                <Text style={{fontSize: 17,}}>上报下一季度的计划</Text>
+                <Text style={{fontSize: 14,
+                    backgroundColor: '#eea14b',
+                    borderRadius: 5,
+                    color: 'white',
+                    marginLeft: 5,
+                  padding: 3,}}>处理中</Text>
+              </View>
+              <Text style={{marginLeft: 5, padding: 3, fontSize: 14, marginTop: 8, color: '#999999'}}>截止日期：2016年6月12日</Text>
             </View>
             <View style={{width: 30,
               justifyContent: 'center',
@@ -163,7 +173,15 @@ var BaoGaoView = React.createClass({
           <View style={styles.separator}></View>
           <View style={styles.row}>
             <View style={{flex: 1, }}>
-              <Text style={{fontSize: 17,}}>总结上一季度的通报</Text>
+              <View style={styles.row}>
+                <Text style={{fontSize: 17,}}>总结上一季度的通报</Text>
+                <Text style={{fontSize: 14,
+                    backgroundColor: '#ea6449',
+                    borderRadius: 5,
+                    color: 'white',
+                    marginLeft: 5,
+                  padding: 3,}}>延期</Text>
+              </View>
               <Text style={{fontSize: 14, marginTop: 8, color: '#999999'}}>截止日期：2016年5月12日</Text>
             </View>
             <View style={{width: 30,
@@ -175,11 +193,11 @@ var BaoGaoView = React.createClass({
             </View>
           </View>
         </View>
-        <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按月通报</Text>
+        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>按月通报</Text>
         <View style={[styles.section]}>
           {this._renderMonthlyInform()}
         </View>
-        <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>存在问题</Text>
+        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>存在问题</Text>
         <View style={[styles.section]}>
           <View style={styles.row}>
             <View style={{flex: 1}}>

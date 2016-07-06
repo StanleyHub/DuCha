@@ -24,6 +24,7 @@ var DuBanView = require('./DuBanView');
 var BaoGaoView = require('./BaoGaoView');
 var KeyProjectView = require('./KeyProjectView');
 var KeyEngineering = require('./KeyEngineering');
+var Chat = require('./Chat');
 
 class TabIcon extends React.Component {
   render(){
@@ -118,6 +119,13 @@ var App = React.createClass({
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
           <Scene key="keyEngineering" component={KeyEngineering}
+            hideNavBar={false}
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="chat" component={Chat} title="在线互动"
             hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}
