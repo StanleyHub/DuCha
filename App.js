@@ -49,9 +49,7 @@ var App = React.createClass({
               icon={TabIcon} iconName={"ios-home"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
-              component={ProjectDashboad}
-              onRight={()=>{Actions.search()}}
-              rightTitle={<Icon style={{color: 'white'}} name={'ios-search'} size={25} />}/>
+              component={ProjectDashboad}/>
             <Scene key="news" title="督办通报"
               icon={TabIcon} iconName={"ios-paper"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}

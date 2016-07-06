@@ -30,7 +30,32 @@ var ProjectDashboad = React.createClass({
   render() {
     return (
       <View style={styles.container}>
+        <View style={styles.searchBox}>
+          <TouchableOpacity onPress={Actions.search}>
+            <View style={[styles.row, styles.searchInput]}>
+              <Icon style={{color: '#DFDFDF'}} name={'ios-search'} size={20} />
+              <Text style={{color: '#DFDFDF', fontSize: 15, marginLeft: 8,}}>输入项目名称进行搜索</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
         <ScrollView style={{flex: 1, marginBottom: 55, marginTop: 10}}>
+          <View style={[styles.grid, {marginBottom: 10}]}>
+            <View style={[styles.row, styles.gridRow]}>
+              <View style={[styles.item, {backgroundColor: '#FB3066'}]}>
+                <TouchableOpacity onPress={() => Actions.units({title: '市委督办', type2: 'all'})}>
+                  <Text style={styles.itemTitle}>市委督办</Text>
+                  <Text style={styles.itemSubTitle}>500个</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={[styles.item, {backgroundColor: '#FB3066'}]}>
+                <TouchableOpacity onPress={() => Actions.units({title: '市政府督办', type2: 'all'})}>
+                  <Text style={styles.itemTitle}>市政府督办</Text>
+                  <Text style={styles.itemSubTitle}>580个</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+
           <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按类型</Text>
           <View style={[styles.grid, {marginBottom: 15}]}>
             <View style={[styles.row, styles.gridRow]}>
