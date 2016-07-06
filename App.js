@@ -45,16 +45,23 @@ var App = React.createClass({
         <Scene key="root">
           <Scene key="tabBar" tabs={true} default="projectDashboad"
             tabBarStyle={{backgroundColor: '#F6F6F6'}}>
-  	        <Scene key="projectDashboad" title="督办项目" initial={false}
+  	        <Scene key="projectDashboad" title="督办项目" initial={true}
               icon={TabIcon} iconName={"ios-home"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
-              component={ProjectDashboad}/>
+              component={ProjectDashboad}
+              onRight={()=>{Actions.search()}}
+              rightTitle={<Icon style={{color: 'white'}} name={'ios-search'} size={25} />}/>
             <Scene key="news" title="督办通报"
               icon={TabIcon} iconName={"ios-paper"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
               component={NewsView}/>
+            <Scene key="chart" title="数据分析"
+              icon={TabIcon} iconName={"ios-pie"}
+              navigationBarStyle={{backgroundColor: '#D03F4A'}}
+              titleStyle={{color: 'white'}}
+              component={ChartView}/>
             <Scene key="my" title="我"
               icon={TabIcon} iconName={"ios-contact"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
@@ -77,13 +84,6 @@ var App = React.createClass({
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
           <Scene key="projectList" component={ProjectList}
-            hideNavBar={false}
-            navigationBarStyle={{backgroundColor: '#D03F4A'}}
-            titleStyle={{color: 'white'}}
-            hideBackImage={true}
-            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
-
-          <Scene key="charts" component={ChartView} title="报表分析"
             hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}
@@ -124,7 +124,7 @@ var App = React.createClass({
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
-          <Scene key="login" component={LoginView} hideNavBar={true} initial={true}/>
+          <Scene key="login" component={LoginView} hideNavBar={true} initial={false}/>
         </Scene>
       </Router>
     );

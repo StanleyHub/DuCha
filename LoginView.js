@@ -78,7 +78,7 @@ var styles = StyleSheet.create({
   form: {
     marginLeft: 15,
     marginRight: 15,
-    marginTop: 80,
+    marginTop: 120,
     borderRadius: 6,
     borderColor:"#ECECEC",
     borderWidth: 1,
@@ -124,7 +124,7 @@ var styles = StyleSheet.create({
     flex: 1,
     width: null,
     height: null,
-    resizeMode: 'contain',
+    resizeMode: 'stretch'
   }
 });
 

@@ -38,14 +38,8 @@ var ProjectDashboad = React.createClass({
             </View>
           </TouchableOpacity>
         </View>
-        <ScrollView style={{flex: 1, marginBottom: 55,}}>
-          <View style={styles.chartBox}>
-            <Text style={styles.title}>2016年安康市共计1021个重点项目</Text>
-            <TouchableOpacity onPress={() => Actions.charts()}>
-              {this._loadChart()}
-            </TouchableOpacity>
-          </View>
-          <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按类型分</Text>
+        <ScrollView style={{flex: 1, marginBottom: 55, marginTop: 10}}>
+          <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按类型</Text>
           <View style={[styles.grid, {marginBottom: 15}]}>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
