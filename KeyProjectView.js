@@ -60,6 +60,10 @@ var KeyProjectView = React.createClass({
   },
 
   render() {
+    var avatarUri = {uri: 'avatar'};
+    if(Platform.OS == 'ios') {
+      avatarUri = require('./images/avatar2.jpg');
+    }
     return (
       <ScrollView style={styles.container}>
         <View style={{
@@ -83,15 +87,7 @@ var KeyProjectView = React.createClass({
               <Text style={styles.buttonText}>督 办</Text>
             </TouchableOpacity>
           </View>
-          <View style={[styles.info, {marginTop: 10}]}>
-            <View style={styles.label}>
-              <Text>督办类型</Text>
-            </View>
-            <View style={styles.input}>
-              <Text>重点项目</Text>
-            </View>
-          </View>
-          <View style={styles.info}>
+          <View style={[styles.info, {marginTop: 15}]}>
             <View style={styles.label}>
               <Text>建设规模</Text>
             </View>
@@ -164,13 +160,92 @@ var KeyProjectView = React.createClass({
             </View>
           </View>
         </View>
+        <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>项目负责人</Text>
+        <View style={[styles.section]}>
+          <View style={styles.row}>
+            <View>
+              <Image style={{width: 60, height: 60, borderRadius: 30,}} source={avatarUri}/>
+            </View>
+            <View style={{flex: 1, marginLeft: 8, marginTop:5}}>
+              <Text style={{fontSize: 18,}}>宋德勋</Text>
+              <Text style={{fontSize: 14, marginTop: 8, color: '#999999'}}>市建设局</Text>
+            </View>
+            <View style={{width: 30,
+              justifyContent: 'center',
+              alignItems: 'center'}}>
+              <Icon name={'ios-chatbubbles'} style={{color: '#87c754'}} size={30}/>
+            </View>
+          </View>
+        </View>
+        <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>督办事项</Text>
+        <View style={[styles.section]}>
+          <View style={styles.row}>
+            <View style={{flex: 1, }}>
+              <Text style={{fontSize: 17,}}>上报下一季度的计划</Text>
+              <Text style={{fontSize: 14, marginTop: 8, color: '#999999'}}>截止日期：2016年6月12日</Text>
+            </View>
+            <View style={{width: 30,
+              justifyContent: 'center',
+              alignItems: 'center'}}>
+              <TouchableOpacity onPress={() => alert("已提醒项目项目负责人尽快办理！")}>
+                <Icon name={'ios-notifications'} style={{color: '#D03F4A'}} size={30}/>
+              </TouchableOpacity>
+            </View>
+          </View>
+          <View style={styles.separator}></View>
+          <View style={styles.row}>
+            <View style={{flex: 1, }}>
+              <Text style={{fontSize: 17,}}>总结上一季度的通报</Text>
+              <Text style={{fontSize: 14, marginTop: 8, color: '#999999'}}>截止日期：2016年5月12日</Text>
+            </View>
+            <View style={{width: 30,
+              justifyContent: 'center',
+              alignItems: 'center'}}>
+              <TouchableOpacity onPress={() => alert("已提醒项目项目负责人尽快办理！")}>
+                <Icon name={'ios-notifications'} style={{color: '#D03F4A'}} size={30}/>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
         <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按月通报</Text>
         <View style={[styles.section]}>
           {this._renderMonthlyInform()}
         </View>
-        <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>存在情况</Text>
+        <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>存在问题</Text>
         <View style={[styles.section]}>
-
+          <View style={styles.row}>
+            <View style={{flex: 1}}>
+              <Text style={{fontSize: 15,color: 'grey'}}>基建工程进入汉江北路段时，发现此段土质松软需要进行特殊处理</Text>
+              <Text style={{fontSize: 12, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
+            </View>
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+              <View style={{width: 60,
+                height: 35,
+                backgroundColor: '#eea14b',
+                borderRadius: 12,
+                justifyContent: 'center',
+                alignItems: 'center'}}>
+                <Text style={{backgroundColor: 'transparent', color: 'white'}}>处理中</Text>
+              </View>
+            </View>
+          </View>
+          <View style={styles.separator}></View>
+          <View style={styles.row}>
+            <View style={{flex: 1}}>
+              <Text style={{fontSize: 15,color: 'grey'}}>拆迁户无法搬迁, 项目有所延期</Text>
+              <Text style={{fontSize: 12, marginTop: 8,color: '#999999'}}>2016年8月21日</Text>
+            </View>
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+              <View style={{width: 60,
+                height: 35,
+                backgroundColor: '#87c754',
+                borderRadius: 12,
+                justifyContent: 'center',
+                alignItems: 'center'}}>
+                <Text style={{backgroundColor: 'transparent', color: 'white'}}>已处理</Text>
+              </View>
+            </View>
+          </View>
         </View>
       </ScrollView>
     );

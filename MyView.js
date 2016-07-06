@@ -15,8 +15,8 @@ var MyView = React.createClass({
 
   getInitialState: function() {
     return {
-      name: '某领导',
-      unit_name: '安康市委督查办'
+      name: '徐启方',
+      unit_name: '安康市政府'
     };
   },
 
@@ -27,7 +27,7 @@ var MyView = React.createClass({
   render() {
     var avatarUri = {uri: 'avatar'};
     if(Platform.OS == 'ios') {
-      avatarUri = require('./images/avatar.png');
+      avatarUri = require('./images/avatar.jpg');
     }
     return (
       <View style={styles.container}>
