@@ -62,9 +62,20 @@ var KeyEngineering = React.createClass({
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={{marginTop: 10, marginLeft: 10, marginBottom: 5, color: 'grey'}}>重点工程</Text>
+        <View style={{
+            backgroundColor: '#ea6449',
+            height: 50,
+            justifyContent: 'center',
+            marginLeft: 10,
+            marginRight: 10,
+            marginTop: 10,
+          }}>
+          <View style={[styles.row, {justifyContent: 'space-between'}]}>
+            <Text style={{fontSize: 18,marginLeft: 8, color: 'white', fontWeight: '400'}}>示范小城镇</Text>
+            <Text style={{fontSize: 15, color: 'white', fontWeight: '400', marginRight: 8,}}>进度缓慢</Text>
+          </View>
+        </View>
         <View style={styles.section}>
-          <Text style={{fontSize: 18, marginTop: 5,}}>示范小城镇</Text>
           <View style={styles.row}>
             {this._loadProgressBar()}
             <Text style={{color: '#ea6449', fontSize: 20,}}>23%</Text>
@@ -72,29 +83,54 @@ var KeyEngineering = React.createClass({
               <Text style={styles.buttonText}>督 办</Text>
             </TouchableOpacity>
           </View>
+          <View style={[styles.info, {marginTop: 10}]}>
+            <View style={styles.label}>
+              <Text>计划数</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>100</Text>
+            </View>
+          </View>
+
           <View style={styles.info}>
-            <Text style={styles.label}>计划数</Text>
-            <Text style={styles.input}>100</Text>
+            <View style={styles.label}>
+              <Text>完成数</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>23</Text>
+            </View>
           </View>
           <View style={styles.info}>
-            <Text style={styles.label}>完成数</Text>
-            <Text style={styles.input}>23</Text>
+            <View style={styles.label}>
+              <Text>达产项目</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>10</Text>
+            </View>
           </View>
           <View style={styles.info}>
-            <Text style={styles.label}>达产项目</Text>
-            <Text style={styles.input}>10</Text>
+            <View style={styles.label}>
+              <Text>总投资</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>0.5 亿元</Text>
+            </View>
           </View>
           <View style={styles.info}>
-            <Text style={styles.label}>总投资</Text>
-            <Text style={styles.input}>0.5 亿元</Text>
+            <View style={styles.label}>
+              <Text>牵头单位</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>建设局</Text>
+            </View>
           </View>
           <View style={styles.info}>
-            <Text style={styles.label}>牵头单位</Text>
-            <Text style={styles.input}>建设局</Text>
-          </View>
-          <View style={styles.info}>
-            <Text style={styles.label}>联系领导</Text>
-            <Text style={styles.input}>宋德勋</Text>
+            <View style={styles.label}>
+              <Text>联系领导</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>宋德勋</Text>
+            </View>
           </View>
         </View>
         <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按月通报</Text>
@@ -155,15 +191,22 @@ var styles = StyleSheet.create({
     color: 'white',
   },
   info: {
-    marginBottom: 12,
+    flexDirection: 'row',
+    height: 40,
   },
   label: {
-    color: '#999999',
+    borderWidth: 1,
+    flex: 3,
+    borderColor: '#999999',
+    justifyContent: 'center',
+    paddingLeft: 5,
   },
   input: {
-    fontSize: 18,
-    marginLeft: 5,
-    marginTop: 5,
+    flex: 4,
+    borderWidth: 1,
+    borderColor: '#999999',
+    justifyContent: 'center',
+    paddingLeft: 5,
   }
 });
 

@@ -62,9 +62,20 @@ var BaoGaoView = React.createClass({
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={{marginTop: 10, marginLeft: 10, marginBottom: 5, color: 'grey'}}>政府工作报告</Text>
+        <View style={{
+            backgroundColor: '#87c754',
+            height: 50,
+            justifyContent: 'center',
+            marginLeft: 10,
+            marginRight: 10,
+            marginTop: 10,
+          }}>
+          <View style={[styles.row, {justifyContent: 'space-between'}]}>
+            <Text style={{fontSize: 18,marginLeft: 8, color: 'white', fontWeight: '400'}}>九年义务教育巩固率达到85％</Text>
+            <Text style={{fontSize: 15, color: 'white', fontWeight: '400', marginRight: 8,}}>已完成</Text>
+          </View>
+        </View>
         <View style={styles.section}>
-          <Text style={{fontSize: 18, marginTop: 5,}}>九年义务教育巩固率达到85％</Text>
           <View style={styles.row}>
             {this._loadProgressBar()}
             <Text style={{color: '#87c754', fontSize: 20,}}>100%</Text>
@@ -130,6 +141,24 @@ var styles = StyleSheet.create({
     fontSize: 16,
     color: 'white',
   },
+  info: {
+    flexDirection: 'row',
+    height: 40,
+  },
+  label: {
+    borderWidth: 1,
+    flex: 3,
+    borderColor: '#999999',
+    justifyContent: 'center',
+    paddingLeft: 5,
+  },
+  input: {
+    flex: 4,
+    borderWidth: 1,
+    borderColor: '#999999',
+    justifyContent: 'center',
+    paddingLeft: 5,
+  }
 });
 
 module.exports = BaoGaoView;

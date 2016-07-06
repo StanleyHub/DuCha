@@ -62,7 +62,14 @@ var KeyProjectView = React.createClass({
   render() {
     return (
       <ScrollView style={styles.container}>
-        <View style={styles.title}>
+        <View style={{
+            backgroundColor: '#eea14b',
+            height: 50,
+            justifyContent: 'center',
+            marginLeft: 10,
+            marginRight: 10,
+            marginTop: 10,
+          }}>
           <View style={[styles.row, {justifyContent: 'space-between'}]}>
             <Text style={{fontSize: 18,marginLeft: 8, color: 'white', fontWeight: '400'}}>汉江景观打造项目</Text>
             <Text style={{fontSize: 15, color: 'white', fontWeight: '400', marginRight: 8,}}>进行中</Text>
@@ -178,14 +185,6 @@ var styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 3,
     backgroundColor: 'white'
-  },
-  title: {
-    backgroundColor: '#eea14b',
-    height: 50,
-    justifyContent: 'center',
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 10,
   },
   circle: {
     width: 50,
