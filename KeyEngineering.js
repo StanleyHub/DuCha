@@ -85,6 +85,22 @@ var KeyEngineering = React.createClass({
           </View>
           <View style={[styles.info, {marginTop: 10}]}>
             <View style={styles.label}>
+              <Text>督办类型</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>重点工程</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
+              <Text>主要内容</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>新建示范小城镇100个</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
               <Text>计划数</Text>
             </View>
             <View style={styles.input}>

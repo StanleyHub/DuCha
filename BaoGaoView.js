@@ -83,6 +83,47 @@ var BaoGaoView = React.createClass({
               <Text style={styles.buttonText}>督 办</Text>
             </TouchableOpacity>
           </View>
+          <View style={[styles.info, {marginTop: 15,}]}>
+            <View style={styles.label}>
+              <Text>督办类型</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>政府工作报告</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
+              <Text>主要内容</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>九年义务教育巩固率达到85％</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
+              <Text>牵头单位</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>教育局</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
+              <Text>联系领导</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>宋德勋</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
+              <Text>截止时间</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>2016年6月25日</Text>
+            </View>
+          </View>
+
         </View>
         <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按月通报</Text>
         <View style={[styles.section]}>
@@ -147,13 +188,13 @@ var styles = StyleSheet.create({
   },
   label: {
     borderWidth: 1,
-    flex: 3,
+    flex: 1,
     borderColor: '#999999',
     justifyContent: 'center',
     paddingLeft: 5,
   },
   input: {
-    flex: 4,
+    flex: 2,
     borderWidth: 1,
     borderColor: '#999999',
     justifyContent: 'center',

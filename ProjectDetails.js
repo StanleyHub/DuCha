@@ -83,6 +83,46 @@ var ProjectDetails = React.createClass({
               <Text style={styles.buttonText}>督 办</Text>
             </TouchableOpacity>
           </View>
+          <View style={[styles.info, {marginTop: 15,}]}>
+            <View style={styles.label}>
+              <Text>督办类型</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>公开承诺</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
+              <Text>主要内容</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>全年新增城镇就业2万人</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
+              <Text>牵头单位</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>人社局</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
+              <Text>联系领导</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>宋德勋</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
+              <Text>截止时间</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>2016年8月25日</Text>
+            </View>
+          </View>
         </View>
         <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按月通报</Text>
         <View style={[styles.section]}>

@@ -85,6 +85,14 @@ var KeyProjectView = React.createClass({
           </View>
           <View style={[styles.info, {marginTop: 10}]}>
             <View style={styles.label}>
+              <Text>督办类型</Text>
+            </View>
+            <View style={styles.input}>
+              <Text>重点项目</Text>
+            </View>
+          </View>
+          <View style={styles.info}>
+            <View style={styles.label}>
               <Text>建设规模</Text>
             </View>
             <View style={styles.input}>
