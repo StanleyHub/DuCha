@@ -42,7 +42,7 @@ var BasicInfo = React.createClass({
       avatarUri = require('../images/avatar2.jpg');
     }
     return (
-      <View>
+      <ScrollView style={styles.container}>
         <View style={{
             backgroundColor: '#eea14b',
             height: 50,
@@ -124,7 +124,8 @@ var BasicInfo = React.createClass({
             </View>
           </View>
         </View>
-      </View>
+        <View style={{height: 100}}/>
+      </ScrollView>
     );
   }
 });

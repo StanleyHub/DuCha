@@ -17,7 +17,7 @@ var Issues = React.createClass({
 
   render(){
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>存在问题</Text>
         <View style={[styles.section]}>
           <View style={styles.row}>
@@ -54,7 +54,8 @@ var Issues = React.createClass({
             </View>
           </View>
         </View>
-      </View>
+        <View style={{height: 100}}/>
+      </ScrollView>
     );
   }
 });

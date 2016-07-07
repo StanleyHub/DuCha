@@ -17,7 +17,7 @@ var Platform = require('Platform');
 var DubanItem = React.createClass({
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>督办事项</Text>
         <View style={styles.section}>
           <View style={styles.row}>
@@ -64,7 +64,8 @@ var DubanItem = React.createClass({
             </View>
           </View>
         </View>
-      </View>
+        <View style={{height: 100}}/>
+      </ScrollView>
     );
   }
 });
