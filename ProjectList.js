@@ -54,7 +54,7 @@ var ProjectList = React.createClass({
                   </View>
                   <View style={styles.row}>
                     <Icon style={{color: '#999999'}} name={'ios-person'} size={22} />
-                    <Text style={{marginLeft: 3, color: '#999999', fontSize: 15, marginTop: 3}}>张翔</Text>
+                    <Text style={{marginLeft: 3, color: '#999999', fontSize: 15, marginTop: 3}}>宋德庆</Text>
                   </View>
                 </View>
               </View>

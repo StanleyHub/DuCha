@@ -46,7 +46,7 @@ var App = React.createClass({
         <Scene key="root">
           <Scene key="tabBar" tabs={true} default="projectDashboad"
             tabBarStyle={{backgroundColor: '#F6F6F6'}}>
-  	        <Scene key="projectDashboad" title="督办项目" initial={true}
+  	        <Scene key="projectDashboad" title="督办项目" initial={false}
               icon={TabIcon} iconName={"ios-home"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
@@ -132,7 +132,7 @@ var App = React.createClass({
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
-          <Scene key="login" component={LoginView} hideNavBar={true} initial={false}/>
+          <Scene key="login" component={LoginView} hideNavBar={true} initial={true}/>
         </Scene>
       </Router>
     );

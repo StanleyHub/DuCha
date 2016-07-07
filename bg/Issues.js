@@ -21,7 +21,7 @@ var Issues = React.createClass({
         <View style={[styles.section, {marginTop: 10}]}>
           <View style={styles.row}>
             <View style={{flex: 1}}>
-              <Text style={{fontSize: 15,color: 'grey'}}>部分贫困户的家庭因为经济上的原因，造成家中子女辍学情况。</Text>
+              <Text style={{fontSize: 15, }}>部分贫困户的家庭因为经济上的原因，造成家中子女辍学情况。</Text>
               <Text style={{fontSize: 12, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
             </View>
             <View style={{justifyContent: 'center', alignItems: 'center'}}>

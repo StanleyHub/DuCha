@@ -19,47 +19,49 @@ var DubanItem = React.createClass({
     return (
       <ScrollView style={styles.container}>
         <View style={[styles.section, {marginTop: 10}]}>
-          <View style={styles.row}>
-            <View style={{flex: 1, }}>
-              <View style={styles.row}>
-                <Text style={{fontSize: 17,}}>上报下一季度的计划</Text>
-                <Text style={{fontSize: 14,
-                    backgroundColor: '#eea14b',
-                    borderRadius: 5,
-                    color: 'white',
-                    marginLeft: 5,
-                  padding: 3,}}>处理中</Text>
-              </View>
-              <Text style={{marginLeft: 5, padding: 3, fontSize: 14, marginTop: 8, color: '#999999'}}>截止日期：2016年6月12日</Text>
+          <View style={[styles.row, styles.item]}>
+            <View style={{flex: 1, padding: 8, justifyContent: 'space-between'}}>
+              <Text style={{fontSize: 17,}}>上报下一季度的计划</Text>
+              <Text style={{padding: 3, fontSize: 14, marginTop: 8, color: '#999999'}}>截止日期：2016年6月12日</Text>
             </View>
-            <View style={{width: 30,
+            <View style={{width: 60,
               justifyContent: 'center',
-              alignItems: 'center'}}>
+              alignItems: 'center',
+              backgroundColor: '#eea14b'}}>
               <TouchableOpacity onPress={() => alert("已提醒项目项目负责人尽快办理！")}>
-                <Icon name={'ios-notifications'} style={{color: '#D03F4A'}} size={30}/>
+                <Icon name={'ios-notifications'} style={{color: 'white'}} size={30}/>
               </TouchableOpacity>
+              <Text style={{fontSize: 14, color: 'white',}}>办理中</Text>
             </View>
           </View>
-          <View style={styles.separator}></View>
-          <View style={styles.row}>
-            <View style={{flex: 1, }}>
-              <View style={styles.row}>
-                <Text style={{fontSize: 17,}}>总结上一季度的通报</Text>
-                <Text style={{fontSize: 14,
-                    backgroundColor: '#ea6449',
-                    borderRadius: 5,
-                    color: 'white',
-                    marginLeft: 5,
-                  padding: 3,}}>延期</Text>
-              </View>
+          <View style={[styles.row, styles.item, {marginTop: 10,}]}>
+            <View style={{flex: 1, padding: 8, justifyContent: 'space-between'}}>
+              <Text style={{fontSize: 17,}}>总结上一季度的通报</Text>
               <Text style={{fontSize: 14, marginTop: 8, color: '#999999'}}>截止日期：2016年5月12日</Text>
             </View>
-            <View style={{width: 30,
+            <View style={{width: 60,
               justifyContent: 'center',
-              alignItems: 'center'}}>
+              alignItems: 'center',
+              backgroundColor: '#ea6449'}}>
               <TouchableOpacity onPress={() => alert("已提醒项目项目负责人尽快办理！")}>
-                <Icon name={'ios-notifications'} style={{color: '#D03F4A'}} size={30}/>
+                <Icon name={'ios-notifications'} style={{color: 'white'}} size={30}/>
               </TouchableOpacity>
+              <Text style={{fontSize: 14, color: 'white',}}>延期</Text>
+            </View>
+          </View>
+          <View style={[styles.row, styles.item, {marginTop: 10,}]}>
+            <View style={{flex: 1, padding: 8, justifyContent: 'space-between'}}>
+              <Text style={{fontSize: 17, flex: 1}}>该项工程未达到政府办公会议要求，现请你局大力推进项目建设</Text>
+              <Text style={{fontSize: 14, marginTop: 8, color: '#999999'}}>截止日期：2016年5月12日</Text>
+            </View>
+            <View style={{width: 60,
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: '#87c754'}}>
+              <TouchableOpacity onPress={() => alert("已提醒项目项目负责人尽快办理！")}>
+                <Icon name={'ios-notifications'} style={{color: 'white'}} size={30}/>
+              </TouchableOpacity>
+              <Text style={{fontSize: 14, color: 'white',}}>已办理</Text>
             </View>
           </View>
         </View>
@@ -76,13 +78,14 @@ var styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
   },
+  item: {
+    backgroundColor: 'white',
+    borderRadius: 3,
+    height: 80
+  },
   section: {
-    padding: 8,
     marginLeft: 10,
     marginRight: 10,
-    marginBottom: 10,
-    borderRadius: 3,
-    backgroundColor: 'white'
   },
   circle: {
     width: 50,

@@ -20,9 +20,9 @@ var Issues = React.createClass({
       <ScrollView style={styles.container}>
         <View style={[styles.section, {marginTop: 10}]}>
           <View style={styles.row}>
-            <View style={{flex: 1}}>
-              <Text style={{fontSize: 15,color: 'grey'}}>基建工程进入汉江北路段时，发现此段土质松软需要进行特殊处理</Text>
-              <Text style={{fontSize: 12, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
+            <View style={{flex: 1, justifyContent: 'space-between'}}>
+              <Text style={{fontSize: 15,}}>基建工程进入汉江北路段时，发现此段土质松软需要进行特殊处理</Text>
+              <Text style={{fontSize: 14, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
             </View>
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
               <View style={{width: 60,
@@ -35,11 +35,10 @@ var Issues = React.createClass({
               </View>
             </View>
           </View>
-          <View style={styles.separator}></View>
-          <View style={styles.row}>
-            <View style={{flex: 1}}>
-              <Text style={{fontSize: 15,color: 'grey'}}>拆迁户无法搬迁, 项目有所延期</Text>
-              <Text style={{fontSize: 12, marginTop: 8,color: '#999999'}}>2016年8月21日</Text>
+          <View style={[styles.row, {marginTop: 10,}]}>
+            <View style={{flex: 1, justifyContent: 'space-between'}}>
+              <Text style={{fontSize: 15,}}>拆迁户无法搬迁, 项目有所延期</Text>
+              <Text style={{fontSize: 14, marginTop: 8,color: '#999999'}}>2016年8月21日</Text>
             </View>
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
               <View style={{width: 60,
@@ -65,14 +64,15 @@ var styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
+    borderRadius: 3,
+    backgroundColor: 'white',
+    padding: 8,
+    height: 80,
   },
   section: {
-    padding: 8,
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 10,
-    borderRadius: 3,
-    backgroundColor: 'white'
   },
   circle: {
     width: 50,

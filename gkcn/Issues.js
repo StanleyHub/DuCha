@@ -20,9 +20,9 @@ var Issues = React.createClass({
       <ScrollView style={styles.container}>
         <View style={[styles.section, {marginTop: 10}]}>
           <View style={styles.row}>
-            <View style={{flex: 1}}>
-              <Text style={{fontSize: 15,color: 'grey'}}>培训过程中由于人员文化素质差异造成培训结果差别较大，造成就业难或者就业后后稳定性差</Text>
-              <Text style={{fontSize: 12, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
+            <View style={{flex: 1,justifyContent: 'space-between'}}>
+              <Text style={{fontSize: 15,}}>培训过程中由于人员文化素质差异造成培训结果差别较大，造成就业难或者就业后后稳定性差</Text>
+              <Text style={{fontSize: 14, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
             </View>
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
               <View style={{width: 60,
@@ -35,11 +35,11 @@ var Issues = React.createClass({
               </View>
             </View>
           </View>
-          <View style={styles.separator}></View>
-          <View style={styles.row}>
-            <View style={{flex: 1}}>
-              <Text style={{fontSize: 15,color: 'grey'}}>转移农村劳动力就业期间，就业人员就业观念转变较慢，造成难就业情况。</Text>
-              <Text style={{fontSize: 12, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
+
+          <View style={[styles.row, {marginTop: 10,}]}>
+            <View style={{flex: 1,justifyContent: 'space-between'}}>
+              <Text style={{fontSize: 15,}}>转移农村劳动力就业期间，就业人员就业观念转变较慢，造成难就业情况。</Text>
+              <Text style={{fontSize: 14, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
             </View>
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
               <View style={{width: 60,
@@ -65,14 +65,15 @@ var styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
+    borderRadius: 3,
+    backgroundColor: 'white',
+    padding: 8,
+    height: 80,
   },
   section: {
-    padding: 8,
     marginLeft: 10,
     marginRight: 10,
     marginBottom: 10,
-    borderRadius: 3,
-    backgroundColor: 'white'
   },
   circle: {
     width: 50,
