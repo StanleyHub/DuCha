@@ -33,7 +33,7 @@ var ProjectDetails = React.createClass({
         tabBarBackgroundColor={'white'}
         tabBarTextStyle={{fontSize: 16, marginTop: 5}}>
 
-        <BasicInfo tabLabel="项目概况" style={{flex: 1}}/>
+        <BasicInfo tabLabel="项目概况"/>
         <DubanItem tabLabel="督办事项"/>
         <MonthReport project={this.props.project} tabLabel="基层汇报"/>
         <Issues tabLabel="存在问题"/>

@@ -5,52 +5,47 @@ import {
   Text,
   View,
   ScrollView,
-  ProgressViewIOS,
-  ProgressBarAndroid,
-  TouchableOpacity
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import {Actions} from 'react-native-router-flux';
-var ScrollableTabView = require('react-native-scrollable-tab-view');
 
 var _ = require('underscore');
 var Platform = require('Platform');
 
-var BasicInfo = require('./bg/BasicInfo');
-var DubanItem = require('./gkcn/DubanItem');
-var MonthReport = require('./gkcn/MonthReport');
-var Issues = require('./bg/Issues');
-// var Issues = require('./gkcn/Issues');
+var Issues = React.createClass({
 
-var BaoGaoView = React.createClass({
-
-  render() {
-    var avatarUri = {uri: 'avatar2'};
-    if(Platform.OS == 'ios') {
-      avatarUri = require('./images/avatar2.jpg');
-    }
+  render(){
     return (
-      <ScrollableTabView style={styles.container}
-        tabBarUnderlineColor={'#D03F4A'}
-        tabBarActiveTextColor={'#D03F4A'}
-        tabBarBackgroundColor={'white'}
-        tabBarTextStyle={{fontSize: 16, marginTop: 5}}>
-
-        <BasicInfo tabLabel="项目概况"/>
-        <DubanItem tabLabel="督办事项"/>
-        <MonthReport project={this.props.project} tabLabel="基层汇报"/>
-        <Issues tabLabel="存在问题"/>
-      </ScrollableTabView>
+      <ScrollView style={styles.container}>
+        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>存在问题</Text>
+        <View style={[styles.section]}>
+          <View style={styles.row}>
+            <View style={{flex: 1}}>
+              <Text style={{fontSize: 15,color: 'grey'}}>部分贫困户的家庭因为经济上的原因，造成家中子女辍学情况。</Text>
+              <Text style={{fontSize: 12, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
+            </View>
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+              <View style={{width: 60,
+                height: 35,
+                backgroundColor: '#eea14b',
+                borderRadius: 12,
+                justifyContent: 'center',
+                alignItems: 'center'}}>
+                <Text style={{backgroundColor: 'transparent', color: 'white'}}>已处理</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View style={{height: 100}}/>
+      </ScrollView>
     );
-  },
+  }
 });
 
-var HEADER_HEIGHT = Platform.OS === 'ios' ? 64 : 55;
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: HEADER_HEIGHT
   },
   row: {
     flexDirection: 'row',
@@ -100,13 +95,13 @@ var styles = StyleSheet.create({
   },
   label: {
     borderWidth: 1,
-    flex: 1,
+    flex: 3,
     borderColor: '#999999',
     justifyContent: 'center',
     paddingLeft: 5,
   },
   input: {
-    flex: 2,
+    flex: 4,
     borderWidth: 1,
     borderColor: '#999999',
     justifyContent: 'center',
@@ -114,4 +109,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = BaoGaoView;
+module.exports = Issues;
