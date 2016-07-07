@@ -21,7 +21,7 @@ var Issues = React.createClass({
         <View style={[styles.section, {marginTop: 10}]}>
           <View style={styles.row}>
             <View style={{flex: 1,justifyContent: 'space-between'}}>
-              <Text style={{fontSize: 15,}}>培训过程中由于人员文化素质差异造成培训结果差别较大，造成就业难或者就业后后稳定性差</Text>
+              <Text style={{fontSize: 15,}}>培训过程中由于人员文化素质差异造成培训结果差别较大</Text>
               <Text style={{fontSize: 14, marginTop: 8,color: '#999999'}}>2016年5月21日</Text>
             </View>
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
