@@ -18,8 +18,7 @@ var Issues = React.createClass({
   render(){
     return (
       <ScrollView style={styles.container}>
-        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>存在问题</Text>
-        <View style={[styles.section]}>
+        <View style={[styles.section, {marginTop: 10}]}>
           <View style={styles.row}>
             <View style={{flex: 1}}>
               <Text style={{fontSize: 15,color: 'grey'}}>培训过程中由于人员文化素质差异造成培训结果差别较大，造成就业难或者就业后后稳定性差</Text>

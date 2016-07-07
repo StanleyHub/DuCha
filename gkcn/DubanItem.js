@@ -18,8 +18,7 @@ var DubanItem = React.createClass({
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>督办事项</Text>
-        <View style={styles.section}>
+        <View style={[styles.section, {marginTop: 10}]}>
           <View style={styles.row}>
             <View style={{flex: 1, }}>
               <View style={styles.row}>

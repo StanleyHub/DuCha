@@ -18,8 +18,7 @@ var Issues = React.createClass({
   render(){
     return (
       <ScrollView style={styles.container}>
-        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>存在问题</Text>
-        <View style={[styles.section]}>
+        <View style={[styles.section, {marginTop: 10,}]}>
           <View style={styles.row}>
             <View style={{flex: 1}}>
               <Text style={{fontSize: 15,color: 'grey'}}>遇到当地居民不配合情况，多次沟通效果甚微</Text>

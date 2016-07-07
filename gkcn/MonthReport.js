@@ -42,11 +42,10 @@ var MonthReport = React.createClass({
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>按月通报</Text>
-        <View style={[styles.section]}>
+        <View style={[styles.section, {marginTop: 10}]}>
           {this._renderMonthlyInform()}
         </View>
-        <View style={{height: 100}}/>  
+        <View style={{height: 100}}/>
       </ScrollView>
     );
   }
