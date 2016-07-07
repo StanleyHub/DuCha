@@ -5,23 +5,26 @@ module.exports = {
     name: '市编委办',
     count: 20
   },{
+    name: '市教育局',
+    count: 13
+  },{
     name: '市人社局',
-    count: 30
+    count: 24
   },{
     name: '市监察局',
-    count: 30
+    count: 53
   },{
     name: '市统计局',
-    count: 30
+    count: 12
   },{
     name: '市住房公积金中心',
-    count: 30
+    count: 23
   },{
     name: '市政府办',
-    count: 30
+    count: 12
   },{
     name: '市政务服务中心',
-    count: 30
+    count: 11
   }],
   Projects: [{
     name: '关于新增城镇就业',
