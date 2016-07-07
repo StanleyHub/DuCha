@@ -5,7 +5,6 @@ import {
   Text,
   View,
   ScrollView,
-  TouchableOpacity
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -13,39 +12,48 @@ import {Actions} from 'react-native-router-flux';
 
 var _ = require('underscore');
 var Platform = require('Platform');
-var ScrollableTabView = require('react-native-scrollable-tab-view');
 
-var BasicInfo = require('./gkcn/BasicInfo');
-var DubanItem = require('./gkcn/DubanItem');
-var MonthReport = require('./gkcn/MonthReport');
-var Issues = require('./gkcn/Issues');
+var MonthReport = React.createClass({
 
-var ProjectDetails = React.createClass({
-  render() {
-    var avatarUri = {uri: 'avatar2'};
-    if(Platform.OS == 'ios') {
-      avatarUri = require('./images/avatar2.jpg');
-    }
-    return (
-      <ScrollableTabView style={styles.container}
-        tabBarUnderlineColor={'#D03F4A'}
-        tabBarActiveTextColor={'#D03F4A'}
-        tabBarBackgroundColor={'white'}
-        tabBarTextStyle={{fontSize: 16, marginTop: 5}}>
-        <BasicInfo tabLabel="项目概况"/>
-        <DubanItem tabLabel="督办事项"/>
-        <MonthReport project={this.props.project} tabLabel="基层汇报"/>
-        <Issues tabLabel="存在问题"/>
-      </ScrollableTabView>
-    );
+  _renderMonthlyInform: function() {
+    return _.map(this.props.project.inform, (inform, index) => {
+      return (
+        <View key={index}>
+          <View style={[styles.row, {justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 5,
+            marginBottom: 5,}]}>
+            <View style={styles.circle}>
+              <Text style={{color: 'white',
+                backgroundColor: 'transparent',
+                fontSize: 18}}>{inform.month}</Text>
+            </View>
+            <Text style={{flex: 1,
+              marginLeft: 15,
+              color: 'grey',
+              fontSize: 15,}}>{inform.content}</Text>
+          </View>
+          <View style={styles.separator}></View>
+        </View>
+      );
+    });
   },
+
+  render() {
+    return (
+      <View>
+        <Text style={{marginTop: 10, marginLeft: 15, marginBottom: 5, color: 'grey'}}>按月通报</Text>
+        <View style={[styles.section]}>
+          {this._renderMonthlyInform()}
+        </View>
+      </View>
+    );
+  }
 });
 
-var HEADER_HEIGHT = Platform.OS === 'ios' ? 64 : 55;
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: HEADER_HEIGHT
   },
   row: {
     flexDirection: 'row',
@@ -109,4 +117,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = ProjectDetails;
+module.exports = MonthReport;
