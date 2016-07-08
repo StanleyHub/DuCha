@@ -81,7 +81,7 @@ var styles = StyleSheet.create({
   item: {
     backgroundColor: 'white',
     borderRadius: 3,
-    height: 80
+    height: 85
   },
   section: {
     marginLeft: 10,
