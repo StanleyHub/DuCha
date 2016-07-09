@@ -15,15 +15,15 @@ import {Actions} from 'react-native-router-flux';
 
 var _ = require('underscore');
 
-var {News} = require('./mock/data');
-var NewsView = React.createClass({
+var {News2} = require('./mock/data');
+var NewsView2 = React.createClass({
 
   _renderListItem: function() {
     var imageUri = {uri: 'dbtb'};
     if(Platform.OS == 'ios') {
       imageUri = require('./images/dbtb.png');
     }
-    return _.map(News, function(item, index) {
+    return _.map(News2, function(item, index) {
       return (
         <View key={index}>
           <View style={[styles.row, styles.listItem]}>
@@ -103,4 +103,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = NewsView;
+module.exports = NewsView2;

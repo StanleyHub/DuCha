@@ -30,7 +30,7 @@ var ShiWei = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView style={{flex: 1, marginBottom: 55, marginTop: 10}}>
+        <ScrollView style={{flex: 1, marginBottom: 55}}>
           <View style={styles.chartBox}>
             <Text style={styles.title}>2016年安康市委督办项目完成情况</Text>
             <TouchableOpacity onPress={() => Actions.chart({type2: 'shiwei'})}>

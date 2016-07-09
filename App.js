@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 var ProjectDashboad = require('./ProjectDashboad');
 var SearchView = require('./SearchView');
-var NewsView = require('./NewsView');
+var NewsList = require('./NewsList');
 var MyView = require('./MyView');
 var LoginView = require('./LoginView');
 var SearchView = require('./SearchView');
@@ -47,7 +47,7 @@ var App = React.createClass({
         <Scene key="root">
           <Scene key="tabBar" tabs={true} default="projectDashboad"
             tabBarStyle={{backgroundColor: '#F6F6F6'}}>
-  	        <Scene key="projectDashboad" title="督办项目" initial={true}
+  	        <Scene key="projectDashboad" title="督查督办" initial={true}
               icon={TabIcon} iconName={"ios-home"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
@@ -58,7 +58,7 @@ var App = React.createClass({
               icon={TabIcon} iconName={"ios-paper"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
               titleStyle={{color: 'white'}}
-              component={NewsView}
+              component={NewsList}
               onRight={()=>{alert('敬请期待');}}
               rightTitle={<Icon style={{color: 'white'}} name={'ios-search'} size={25} />}/>
             <Scene key="my" title="我"
