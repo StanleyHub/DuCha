@@ -49,14 +49,14 @@ var App = React.createClass({
             tabBarStyle={{backgroundColor: '#F6F6F6'}}>
   	        <Scene key="projectDashboad" title="督查督办" initial={true}
               icon={TabIcon} iconName={"ios-home"}
-              navigationBarStyle={{backgroundColor: '#D03F4A'}}
+              navigationBarStyle={{backgroundColor: '#D03F4A', borderBottomWidth: 0}}
               titleStyle={{color: 'white'}}
               component={ProjectDashboad}
               onRight={() => Actions.search()}
               rightTitle={<Icon style={{color: 'white'}} name={'ios-search'} size={25} />}/>
             <Scene key="news" title="督办通报"
               icon={TabIcon} iconName={"ios-paper"}
-              navigationBarStyle={{backgroundColor: '#D03F4A'}}
+              navigationBarStyle={{backgroundColor: '#D03F4A', borderBottomWidth: 0}}
               titleStyle={{color: 'white'}}
               component={NewsList}
               onRight={()=>{alert('敬请期待');}}

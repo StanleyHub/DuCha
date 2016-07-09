@@ -10,15 +10,16 @@ var ScrollableTabView = require('react-native-scrollable-tab-view');
 var NewsView = require('./NewsView');
 var NewsView2 = require('./NewsView2');
 var {News, News2} = require('./mock/data');
+var OverrideTabBar = require('./OverrideTabBar');
 
 var NewsList = React.createClass({
   render() {
     return (
       <ScrollableTabView style={styles.container}
-        tabBarUnderlineColor={'#D03F4A'}
-        tabBarActiveTextColor={'#D03F4A'}
-        tabBarBackgroundColor={'white'}
-        tabBarTextStyle={{fontSize: 16, marginTop: 5}}>
+        tabBarUnderlineColor={'white'}
+        tabBarActiveTextColor={'white'}
+        tabBarTextStyle={{fontSize: 18, marginTop: 5, color: 'white', fontWeight: '500'}}
+        renderTabBar={() => <OverrideTabBar/>}>
 
         <NewsView2 tabLabel="市委通报"/>
         <NewsView tabLabel="市政府通报"/>

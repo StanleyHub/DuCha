@@ -10,12 +10,13 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import {Actions} from 'react-native-router-flux';
-var ScrollableTabView = require('react-native-scrollable-tab-view');
+import ScrollableTabView from 'react-native-scrollable-tab-view';
 
 var Platform = require('Platform');
 
 var ShiWei = require('./ShiWei');
 var ZhengFu = require('./ZhengFu');
+var OverrideTabBar = require('./OverrideTabBar');
 
 var ProjectDashboad = React.createClass({
 
@@ -34,10 +35,10 @@ var ProjectDashboad = React.createClass({
   render() {
     return (
       <ScrollableTabView style={styles.container}
-        tabBarUnderlineColor={'#D03F4A'}
-        tabBarActiveTextColor={'#D03F4A'}
-        tabBarBackgroundColor={'white'}
-        tabBarTextStyle={{fontSize: 16, marginTop: 5}}>
+        tabBarUnderlineColor={'white'}
+        tabBarActiveTextColor={'white'}
+        tabBarTextStyle={{fontSize: 18, marginTop: 5, color: 'white', fontWeight: '500'}}
+        renderTabBar={() => <OverrideTabBar/>}>
         <ShiWei tabLabel="市委督办"/>
         <ZhengFu tabLabel="市政府督办"/>
       </ScrollableTabView>
