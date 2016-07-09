@@ -60,11 +60,6 @@ var App = React.createClass({
               component={NewsView}
               onRight={()=>{alert('敬请期待');}}
               rightTitle={<Icon style={{color: 'white'}} name={'ios-search'} size={25} />}/>
-            <Scene key="chart" title="数据分析"
-              icon={TabIcon} iconName={"ios-pie"}
-              navigationBarStyle={{backgroundColor: '#D03F4A'}}
-              titleStyle={{color: 'white'}}
-              component={ChartView}/>
             <Scene key="my" title="我"
               icon={TabIcon} iconName={"ios-contact"}
               navigationBarStyle={{backgroundColor: '#D03F4A'}}
@@ -131,6 +126,14 @@ var App = React.createClass({
             hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="chart" title="统计分析"
+            icon={TabIcon} iconName={"ios-pie"}
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            component={ChartView}
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 

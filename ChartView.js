@@ -94,7 +94,6 @@ var styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: HEADER_HEIGHT,
-    marginBottom: 55,
   },
   section: {
     marginLeft: 10,

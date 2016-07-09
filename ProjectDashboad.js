@@ -38,8 +38,8 @@ var ProjectDashboad = React.createClass({
         tabBarActiveTextColor={'#D03F4A'}
         tabBarBackgroundColor={'white'}
         tabBarTextStyle={{fontSize: 16, marginTop: 5}}>
-        <ShiWei tabLabel="项目概况"/>
-        <ZhengFu tabLabel="督办事项"/>
+        <ShiWei tabLabel="市委督办"/>
+        <ZhengFu tabLabel="市政府督办"/>
       </ScrollableTabView>
     );
   },

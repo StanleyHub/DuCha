@@ -31,6 +31,20 @@ var ShiWei = React.createClass({
     return (
       <View style={styles.container}>
         <ScrollView style={{flex: 1, marginBottom: 55, marginTop: 10}}>
+          <View style={styles.chartBox}>
+            <Text style={styles.title}>2016年安康市委督办项目完成情况</Text>
+            <TouchableOpacity onPress={() => Actions.chart()}>
+              {this._loadChart('piechart')}
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => Actions.chart()}>
+              <View style={{height: 40, alignItems: 'center',
+                justifyContent: 'center', borderTopWidth: 1,
+                borderColor: '#DFDFDF'}}>
+                <Text style={{color: '#1DB8FF', fontSize: 18}}>更多</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+
           <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按类型</Text>
           <View style={[styles.grid, {marginBottom: 15}]}>
             <View style={[styles.row, styles.gridRow]}>
