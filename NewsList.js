@@ -16,7 +16,7 @@ var NewsList = React.createClass({
   render() {
     return (
       <ScrollableTabView style={styles.container}
-        tabBarUnderlineColor={'white'}
+        tabBarUnderlineColor={'#DFDFDF'}
         tabBarActiveTextColor={'white'}
         tabBarTextStyle={{fontSize: 18, marginTop: 5, color: 'white', fontWeight: '500'}}
         renderTabBar={() => <OverrideTabBar/>}>

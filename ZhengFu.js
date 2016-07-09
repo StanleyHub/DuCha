@@ -32,7 +32,7 @@ var ZhengFu = React.createClass({
       <View style={styles.container}>
         <ScrollView style={{flex: 1, marginBottom: 55}}>
           <View style={styles.chartBox}>
-            <Text style={styles.title}>2016年安康市委督办项目完成情况</Text>
+            <Text style={styles.title}>2016年安康市政府督办项目完成情况</Text>
             <TouchableOpacity onPress={() => Actions.chart({type2: 'zhengfu'})}>
               {this._loadChart('piechart')}
             </TouchableOpacity>
@@ -55,17 +55,12 @@ var ZhengFu = React.createClass({
             </View>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '重点工程'})}>
-                  <Text style={styles.itemTitle}>重点工程</Text>
-                  <Text style={styles.itemSubTitle}>30个</Text>
-                </TouchableOpacity>
-              </View>
-              <View style={[styles.item]}>
                 <TouchableOpacity onPress={() => Actions.fenkoulist({title: '公开承诺'})}>
                   <Text style={styles.itemTitle}>公开承诺</Text>
                   <Text style={styles.itemSubTitle}>108个</Text>
                 </TouchableOpacity>
               </View>
+              <View style={[styles.item, {backgroundColor: 'white'}]}/>
             </View>
           </View>
 

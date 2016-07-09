@@ -56,17 +56,12 @@ var ShiWei = React.createClass({
             </View>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '重点工程'})}>
-                  <Text style={styles.itemTitle}>重点工程</Text>
-                  <Text style={styles.itemSubTitle}>40个</Text>
-                </TouchableOpacity>
-              </View>
-              <View style={[styles.item]}>
                 <TouchableOpacity onPress={() => Actions.fenkoulist({title: '公开承诺'})}>
                   <Text style={styles.itemTitle}>公开承诺</Text>
                   <Text style={styles.itemSubTitle}>108个</Text>
                 </TouchableOpacity>
               </View>
+              <View style={[styles.item, {backgroundColor: 'white'}]}/>
             </View>
           </View>
 
