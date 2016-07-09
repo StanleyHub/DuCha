@@ -66,7 +66,7 @@ var ChartView = React.createClass({
       <ScrollView style={styles.container}>
         <View style={styles.section}>
           <View style={styles.chartBox}>
-            <Text style={styles.title}>2016年安康市督办项目完成情况</Text>
+            <Text style={styles.title}>{this.props.type2 === 'shiwei' ? '2016年安康市委督办项目完成情况' : '2016年安康市政府督办项目完成情况' }</Text>
             <TouchableOpacity>
               {this._loadChart('piechart')}
             </TouchableOpacity>
@@ -74,13 +74,14 @@ var ChartView = React.createClass({
         </View>
         <View style={styles.section}>
           <View style={styles.chartBox}>
-            <Text style={styles.title}>2016年安康市各类型督办项目完成情况</Text>
+            <Text style={styles.title}>{this.props.type2 === 'shiwei' ? '2016年安康市委各类型督办项目完成情况' : '2016年安康市政府各类型督办项目完成情况' }</Text>
             {this._loadChart('columnchart')}
           </View>
         </View>
         <View style={styles.section}>
           <View style={styles.chartBox}>
-            <Text style={styles.title}>2016年安康市各分口督办项目完成情况</Text>
+            <Text style={styles.title}>{this.props.type2 === 'shiwei' ? '2016年安康市委各分口督办项目完成情况' : '2016年安康市政府各分口督办项目完成情况' }</Text>
+            <Text style={styles.title}></Text>
             {this._loadChart('barchart')}
           </View>
         </View>

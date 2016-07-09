@@ -25,6 +25,7 @@ var BaoGaoView = require('./BaoGaoView');
 var KeyProjectView = require('./KeyProjectView');
 var KeyEngineering = require('./KeyEngineering');
 var Chat = require('./Chat');
+var FenKouListView = require('./FenKouListView');
 
 class TabIcon extends React.Component {
   render(){
@@ -75,6 +76,13 @@ var App = React.createClass({
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
           <Scene key="units" component={UnitsView}
+            hideNavBar={false}
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="fenkoulist" component={FenKouListView}
             hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}

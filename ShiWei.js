@@ -33,15 +33,8 @@ var ShiWei = React.createClass({
         <ScrollView style={{flex: 1, marginBottom: 55, marginTop: 10}}>
           <View style={styles.chartBox}>
             <Text style={styles.title}>2016年安康市委督办项目完成情况</Text>
-            <TouchableOpacity onPress={() => Actions.chart()}>
+            <TouchableOpacity onPress={() => Actions.chart({type2: 'shiwei'})}>
               {this._loadChart('piechart')}
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => Actions.chart()}>
-              <View style={{height: 40, alignItems: 'center',
-                justifyContent: 'center', borderTopWidth: 1,
-                borderColor: '#DFDFDF'}}>
-                <Text style={{color: '#1DB8FF', fontSize: 18}}>更多</Text>
-              </View>
             </TouchableOpacity>
           </View>
 
@@ -49,13 +42,13 @@ var ShiWei = React.createClass({
           <View style={[styles.grid, {marginBottom: 15}]}>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '政府工作报告', type2: 'gzbg'})}>
+                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '政府工作报告'})}>
                   <Text style={styles.itemTitle}>政府工作报告</Text>
                   <Text style={styles.itemSubTitle}>80个</Text>
                 </TouchableOpacity>
               </View>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '重点项目', type2: 'zdxm'})}>
+                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '重点项目'})}>
                   <Text style={styles.itemTitle}>重点项目</Text>
                   <Text style={styles.itemSubTitle}>280个</Text>
                 </TouchableOpacity>
@@ -63,13 +56,13 @@ var ShiWei = React.createClass({
             </View>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '重点工程', type2: 'zdgc'})}>
+                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '重点工程'})}>
                   <Text style={styles.itemTitle}>重点工程</Text>
                   <Text style={styles.itemSubTitle}>40个</Text>
                 </TouchableOpacity>
               </View>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.units({title: '公开承诺', type2: 'gkcn'})}>
+                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '公开承诺'})}>
                   <Text style={styles.itemTitle}>公开承诺</Text>
                   <Text style={styles.itemSubTitle}>108个</Text>
                 </TouchableOpacity>

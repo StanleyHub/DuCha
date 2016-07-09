@@ -1,6 +1,26 @@
 'use strict';
 // http://139.129.200.102:10020/api/
 module.exports = {
+  FenKou: [{
+    name: '财经口',
+    count: '90'
+  },{
+    name: '工交口',
+    count: '103'
+  },{
+    name: '金融口',
+    count: '103'
+  }, {
+    name: '城建口',
+    count: '45'
+  }, {
+    name: '城投口',
+    count: '153'
+  }, {
+    name: '农口',
+    count: '21'
+  }
+  ],
   Units: [{
     name: '市编委办',
     count: 20
