@@ -41,14 +41,14 @@ const OverrideTabBar = React.createClass({
     const backgroundColor = isTabActive ? '#D03F4A' : '#FB3066';
 
     return <Button
-      style={{flex: 1, backgroundColor: backgroundColor}}
+      style={{flex: 1}}
       key={name}
       accessible={true}
       accessibilityLabel={name}
       accessibilityTraits='button'
       onPress={() => this.props.goToPage(page)}
     >
-      <View style={[styles.tab, this.props.tabStyle]}>
+      <View style={[styles.tab, this.props.tabStyle, {flex: 1, backgroundColor: backgroundColor}]}>
         <Text style={[{color: textColor, fontWeight, }, textStyle, ]}>
           {name}
         </Text>
@@ -72,7 +72,7 @@ const OverrideTabBar = React.createClass({
     });
 
     return (
-      <View style={[styles.tabs, {backgroundColor: this.props.backgroundColor, }, this.props.style, ]}>
+      <View style={[styles.tabs, this.props.style, ]}>
         {this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}
       </View>
     );

@@ -50,7 +50,7 @@ var App = React.createClass({
         <Scene key="root">
           <Scene key="tabBar" tabs={true} default="projectDashboad"
             tabBarStyle={{backgroundColor: '#F6F6F6'}}>
-  	        <Scene key="projectDashboad" title="督查督办" initial={true}
+  	        <Scene key="projectDashboad" title="督查督办" initial={false}
               icon={TabIcon} iconName={"ios-home"}
               navigationBarStyle={{backgroundColor: '#D03F4A', borderBottomWidth: 0}}
               titleStyle={{color: 'white'}}
@@ -141,6 +141,7 @@ var App = React.createClass({
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
           <Scene key="chart" title="统计分析"
+            hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}
             component={ChartView}
@@ -148,6 +149,7 @@ var App = React.createClass({
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
           <Scene key="yaoqiu1" title="中央要求"
+            hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}
             component={YaoQiu1}
@@ -155,6 +157,7 @@ var App = React.createClass({
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
           <Scene key="yaoqiu2" title="省级要求"
+            hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}
             component={YaoQiu2}
@@ -162,12 +165,13 @@ var App = React.createClass({
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
           <Scene key="yaoqiu3" title="市级要求"
+            hideNavBar={false}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}
             component={YaoQiu3}
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
-          <Scene key="login" component={LoginView} hideNavBar={true} initial={false}/>
+          <Scene key="login" component={LoginView} hideNavBar={true} initial={true}/>
         </Scene>
       </Router>
     );

@@ -66,13 +66,13 @@ var ZhengFu = React.createClass({
           <View style={[styles.grid, {marginBottom: 15}]}>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '政府工作报告'})}>
+                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '政府工作报告', type2: 'gzbg'})}>
                   <Text style={styles.itemTitle}>政府工作报告</Text>
                   <Text style={styles.itemSubTitle}>123个</Text>
                 </TouchableOpacity>
               </View>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '重点项目'})}>
+                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '重点项目', type2: 'zdxm'})}>
                   <Text style={styles.itemTitle}>重点项目</Text>
                   <Text style={styles.itemSubTitle}>380个</Text>
                 </TouchableOpacity>
@@ -80,7 +80,7 @@ var ZhengFu = React.createClass({
             </View>
             <View style={[styles.row, styles.gridRow]}>
               <View style={[styles.item]}>
-                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '公开承诺'})}>
+                <TouchableOpacity onPress={() => Actions.fenkoulist({title: '公开承诺', type2: 'gkcn'})}>
                   <Text style={styles.itemTitle}>公开承诺</Text>
                   <Text style={styles.itemSubTitle}>108个</Text>
                 </TouchableOpacity>

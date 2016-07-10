@@ -28,7 +28,7 @@ var NewsList = React.createClass({
   },
 });
 
-var HEADER_HEIGHT = Platform.OS === 'ios' ? 64 : 55;
+var HEADER_HEIGHT = Platform.OS === 'ios' ? 64 : 54;
 var styles = StyleSheet.create({
   container: {
     flex: 1,

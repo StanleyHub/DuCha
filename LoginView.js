@@ -33,6 +33,7 @@ var LoginView = React.createClass({
     return (
       <View style={styles.container}>
         <Image source={imageUri} style={styles.backgroundImage}>
+          <Text style={styles.title}>安康市委政府督查督办管理平台</Text>
           <View style={styles.form}>
             <View style={[styles.row, styles.phone]}>
               <Icon name={'ios-call'} size={25} style={styles.icon}/>
@@ -69,16 +70,17 @@ var styles = StyleSheet.create({
   },
   title: {
     color: '#415680',
-    fontSize: 30,
-    fontWeight: '400',
+    fontSize: 25,
+    fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 50,
-    backgroundColor: '#F4FAFF'
+    marginBottom: 5,
+    backgroundColor: '#F1F1F1',
+    marginTop: 45,
   },
   form: {
     marginLeft: 15,
     marginRight: 15,
-    marginTop: 120,
+    marginTop: 30,
     borderRadius: 6,
     borderColor:"#ECECEC",
     borderWidth: 1,
