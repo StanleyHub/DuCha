@@ -28,16 +28,13 @@ var ProjectList = React.createClass({
     if(project.type === '重点项目') {
       Actions.keyProject({title: project.name, project: project})
     }
-    if(project.type === '重点工程') {
-      Actions.keyEngineering({title: project.name, project: project})
-    }
   },
 
   _renderProject: function() {
     return _.map(this.props.projects, (project, index) => {
       var color = '#87c754';
       if(project.status == '进行中') {
-        color = '#eea14b';
+        color = '#EED34B';
       }
       if(project.status == '进度缓慢') {
         color = '#ea6449';

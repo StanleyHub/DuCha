@@ -27,7 +27,7 @@ var DubanItem = React.createClass({
             <View style={{width: 60,
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: '#eea14b'}}>
+              backgroundColor: '#EED34B'}}>
               <TouchableOpacity onPress={() => alert("已提醒项目项目负责人尽快办理！")}>
                 <Icon name={'ios-notifications'} style={{color: 'white'}} size={30}/>
               </TouchableOpacity>

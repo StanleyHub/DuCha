@@ -23,7 +23,7 @@ var BasicInfo = React.createClass({
       return (
         <ProgressViewIOS style={styles.progressView}
           progress={0.43}
-          progressTintColor="#eea14b"/>
+          progressTintColor="#EED34B"/>
       );
     } else {
       return (
@@ -31,7 +31,7 @@ var BasicInfo = React.createClass({
           progress={0.43}
           styleAttr="Horizontal"
           indeterminate={false}
-          color="#eea14b"/>
+          color="#EED34B"/>
       );
     }
   },
@@ -44,7 +44,7 @@ var BasicInfo = React.createClass({
     return (
       <ScrollView style={styles.container}>
         <View style={{
-            backgroundColor: '#eea14b',
+            backgroundColor: '#EED34B',
             height: 50,
             justifyContent: 'center',
             marginLeft: 10,
@@ -59,7 +59,7 @@ var BasicInfo = React.createClass({
         <View style={styles.section}>
           <View style={styles.row}>
             {this._loadProgressBar()}
-            <Text style={{color: '#eea14b', fontSize: 20,}}>43.0%</Text>
+            <Text style={{color: '#EED34B', fontSize: 20,}}>43.0%</Text>
             <TouchableOpacity style={styles.button} onPress={() => Actions.duban()}>
               <Text style={styles.buttonText}>督 办</Text>
             </TouchableOpacity>

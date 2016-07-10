@@ -37,6 +37,31 @@ var ZhengFu = React.createClass({
               {this._loadChart('piechart')}
             </TouchableOpacity>
           </View>
+
+          <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>核心要求</Text>
+          <View style={[styles.grid, {marginBottom: 15}]}>
+            <View style={[styles.row, styles.gridRow, {height: 50}]}>
+              <View style={[styles.item, {backgroundColor: '#FB3066',
+                justifyContent: 'center', alignItems: 'center',}]}>
+                <TouchableOpacity onPress={() => Actions.yaoqiu1()}>
+                  <Text style={[styles.itemTitle, {fontSize: 18, fontWeight: '500'}]}>中央要求</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={[styles.item, {backgroundColor: '#FB3066',
+                justifyContent: 'center', alignItems: 'center'}]}>
+                <TouchableOpacity onPress={() => Actions.yaoqiu2()}>
+                  <Text style={[styles.itemTitle, {fontSize: 18, fontWeight: '500'}]}>省级要求</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={[styles.item,
+                {justifyContent: 'center', alignItems: 'center',
+                  backgroundColor: '#FB3066'}]}>
+                <TouchableOpacity onPress={() => Actions.yaoqiu3()}>
+                  <Text style={[styles.itemTitle, {fontSize: 18, fontWeight: '500'}]}>市级要求</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
           <Text style={{marginLeft: 10, marginBottom: 5, color: 'grey'}}>按类型</Text>
           <View style={[styles.grid, {marginBottom: 15}]}>
             <View style={[styles.row, styles.gridRow]}>

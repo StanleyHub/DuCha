@@ -27,7 +27,7 @@ var Issues = React.createClass({
             <View style={{justifyContent: 'center', alignItems: 'center'}}>
               <View style={{width: 60,
                 height: 35,
-                backgroundColor: '#eea14b',
+                backgroundColor: '#EED34B',
                 borderRadius: 12,
                 justifyContent: 'center',
                 alignItems: 'center'}}>

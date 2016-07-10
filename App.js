@@ -26,6 +26,9 @@ var KeyProjectView = require('./KeyProjectView');
 var KeyEngineering = require('./KeyEngineering');
 var Chat = require('./Chat');
 var FenKouListView = require('./FenKouListView');
+var YaoQiu1 = require('./YaoQiu1');
+var YaoQiu2 = require('./YaoQiu2');
+var YaoQiu3 = require('./YaoQiu3');
 
 class TabIcon extends React.Component {
   render(){
@@ -138,13 +141,32 @@ var App = React.createClass({
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
           <Scene key="chart" title="统计分析"
-            icon={TabIcon} iconName={"ios-pie"}
             navigationBarStyle={{backgroundColor: '#D03F4A'}}
             titleStyle={{color: 'white'}}
             component={ChartView}
             hideBackImage={true}
             backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
 
+          <Scene key="yaoqiu1" title="中央要求"
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            component={YaoQiu1}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="yaoqiu2" title="省级要求"
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            component={YaoQiu2}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
+
+          <Scene key="yaoqiu3" title="市级要求"
+            navigationBarStyle={{backgroundColor: '#D03F4A'}}
+            titleStyle={{color: 'white'}}
+            component={YaoQiu3}
+            hideBackImage={true}
+            backTitle={<Icon style={{color: 'white'}} name={'ios-arrow-back'} size={25} />}/>
           <Scene key="login" component={LoginView} hideNavBar={true} initial={false}/>
         </Scene>
       </Router>

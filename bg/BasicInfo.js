@@ -22,16 +22,16 @@ var BasicInfo = React.createClass({
     if(Platform.OS === 'ios') {
       return (
         <ProgressViewIOS style={styles.progressView}
-          progress={0.43}
-          progressTintColor="#eea14b"/>
+          progress={1}
+          progressTintColor="#87c754"/>
       );
     } else {
       return (
         <ProgressBarAndroid style={styles.progressView}
-          progress={0.43}
+          progress={1}
           styleAttr="Horizontal"
           indeterminate={false}
-          color="#eea14b"/>
+          color="#87c754"/>
       );
     }
   },

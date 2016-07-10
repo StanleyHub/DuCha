@@ -23,7 +23,7 @@ var BasicInfo = React.createClass({
       return (
         <ProgressViewIOS style={styles.progressView}
           progress={0.43}
-          progressTintColor="#eea14b"/>
+          progressTintColor="#ea6449"/>
       );
     } else {
       return (
@@ -31,7 +31,7 @@ var BasicInfo = React.createClass({
           progress={0.43}
           styleAttr="Horizontal"
           indeterminate={false}
-          color="#eea14b"/>
+          color="#ea6449"/>
       );
     }
   },
@@ -44,7 +44,7 @@ var BasicInfo = React.createClass({
     return (
       <ScrollView style={styles.container}>
         <View style={{
-            backgroundColor: '#eea14b',
+            backgroundColor: '#ea6449',
             height: 50,
             justifyContent: 'center',
             marginLeft: 10,
@@ -53,13 +53,13 @@ var BasicInfo = React.createClass({
           }}>
           <View style={[styles.row, {justifyContent: 'space-between'}]}>
             <Text style={{fontSize: 18,marginLeft: 8, color: 'white', fontWeight: '400'}}>汉江景观打造项目</Text>
-            <Text style={{fontSize: 15, color: 'white', fontWeight: '400', marginRight: 8,}}>进行中</Text>
+            <Text style={{fontSize: 15, color: 'white', fontWeight: '400', marginRight: 8,}}>进度缓慢</Text>
           </View>
         </View>
         <View style={styles.section}>
           <View style={styles.row}>
             {this._loadProgressBar()}
-            <Text style={{color: '#eea14b', fontSize: 20,marginTop: 3}}>50%</Text>
+            <Text style={{color: '#ea6449', fontSize: 20,marginTop: 3}}>50%</Text>
             <TouchableOpacity style={styles.button} onPress={() => Actions.duban()}>
               <Text style={styles.buttonText}>督 办</Text>
             </TouchableOpacity>

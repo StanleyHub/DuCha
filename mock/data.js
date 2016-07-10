@@ -73,7 +73,7 @@ module.exports = {
   },{
     name: '汉江景观打造项目',
     type: '重点项目',
-    status: '进行中',
+    status: '进度缓慢',
     progress: '50%',
     inform: [{
       month: '1月',
@@ -84,24 +84,6 @@ module.exports = {
     },{
       month: '3月',
       content: '主体完工，下月工作计划30%',
-    }]
-  },{
-    name: '示范小城镇',
-    type: '重点工程',
-    status: '进度缓慢',
-    progress: '23%',
-    inform: [{
-      month: '1月',
-      content: '第一笔投资到位',
-    },{
-      month: '2月',
-      content: '完成示范小镇5个',
-    },{
-      month: '3月',
-      content: '完成示范小镇8个',
-    },{
-      month: '4月',
-      content: '完成示范小镇10个',
     }]
   },{
     name: '关于九年制义务教育',

@@ -22,13 +22,10 @@ var UnitsView = React.createClass({
     var projects = [];
     switch (this.props.type2) {
       case 'gzbg':
-        projects = Projects.slice(3,4);
+        projects = Projects.slice(2,3);
         break;
       case 'zdxm':
         projects = Projects.slice(1,2);
-        break;
-      case 'zdgc':
-        projects = Projects.slice(2,3);
         break;
       case 'gkcn':
         projects = Projects.slice(0,1);

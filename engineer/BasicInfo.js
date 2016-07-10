@@ -23,7 +23,7 @@ var BasicInfo = React.createClass({
       return (
         <ProgressViewIOS style={styles.progressView}
           progress={0.43}
-          progressTintColor="#eea14b"/>
+          progressTintColor="#EED34B"/>
       );
     } else {
       return (
@@ -31,7 +31,7 @@ var BasicInfo = React.createClass({
           progress={0.43}
           styleAttr="Horizontal"
           indeterminate={false}
-          color="#eea14b"/>
+          color="#EED34B"/>
       );
     }
   },
